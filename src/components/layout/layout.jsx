@@ -1,19 +1,18 @@
 import React, {Fragment} from "react";
+import { Link } from "react-router-dom";
 import "./layout.scss";
+import { MenuLeftItem } from "../../const";
 import {ReactComponent as StatisticsLogo} from "../../img/icons/statistics.svg";
 import {ReactComponent as ArrowBackLogo} from "../../img/icons/arrow-back.svg";
 import {ReactComponent as InvoicesLogo} from "../../img/icons/calculate.svg";
 import {ReactComponent as ScheduleLogo} from "../../img/icons/schedule.svg";
-import {ReactComponent as MenuLogo} from "../../img/icons/menu.svg";
-import {ReactComponent as LocationLogo} from "../../img/icons/location.svg";
-import {ReactComponent as TimeLogo} from "../../img/icons/time.svg";
 import {ReactComponent as NotesLogo} from "../../img/icons/notes.svg";
 import {ReactComponent as FriendsLogo} from "../../img/icons/friends.svg";
 import {ReactComponent as PhotosLogo} from "../../img/icons/photos.svg";
 import {ReactComponent as SettingsLogo} from "../../img/icons/settings.svg";
 import {ReactComponent as ArrowDownLogo} from "../../img/icons/arrow-down.svg";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, activeLeftMenu }) => {
     return (
         <Fragment>
             <header className="page-header">
@@ -38,34 +37,30 @@ const Layout = ({ children }) => {
                     </div>
                 </div>
                 <div className="menu">
-                    <div className="menu__left">
-                        <div className="menu__item menu__item_active">
-                            <MenuLogo/>
-                            Activity
-                        </div>
-                        <div className="menu__item">
-                            <LocationLogo/>
-                            Map
-                        </div>
-                        <div className="menu__item">
-                            <TimeLogo/>
-                            Time
-                        </div>
-                    </div>
+                    <ul className="menu__left">
+                        {Object.values(MenuLeftItem).map(menuItem => {
+                            return <li className={`menu__item ${activeLeftMenu === menuItem.name ? 'menu__item_active' : ''}`} key={menuItem.name}>
+                                <Link to = {menuItem.route} className="menu__item_link">
+                                    {menuItem.logo}
+                                    {menuItem.name}
+                                </Link>
+                            </li>
+                        })}
+                    </ul>
                     <div className="menu__right">
-                        <div className="menu__item">
+                        <div className="menu__right_item">
                             <NotesLogo/>
                             Notes
                         </div>
-                        <div className="menu__item">
+                        <div className="menu__right_item">
                             <FriendsLogo/>
                             Friends
                         </div>
-                        <div className="menu__item">
+                        <div className="menu__right_item">
                             <PhotosLogo/>
                             Photos
                         </div>
-                        <div className="menu__item">
+                        <div className="menu__right_item">
                             <SettingsLogo/>
                             <ArrowDownLogo/>
                         </div>

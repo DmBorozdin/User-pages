@@ -9,14 +9,17 @@
     display: flex;
 }
 
-.menu__item{
+.menu__item_link, .menu__right_item{
     display: flex;
     padding: 0 16px;
     align-items: center;
     height: 40px;
     gap: 8px;
+    text-decoration: none;
+    color: $black;
     &:hover {
         cursor: pointer;
+        background-color: $grey;
     }
 }
 
@@ -25,7 +28,12 @@
 }
 
 .menu__left, .menu__right{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .page-header {
