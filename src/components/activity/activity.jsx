@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import withLayout from "../../hocs/with-layout";
 import "./activity.scss";
+import ShortPostView from "../short-post-view/short-post-view";
 import {ReactComponent as TelegramLogo} from "../../img/icons/telegram.svg";
 import {ReactComponent as HHruLogo} from "../../img/icons/hh.ru.svg";
 import {ReactComponent as TwitterLogo} from "../../img/icons/twitter.svg";
@@ -13,22 +15,42 @@ import {ReactComponent as SchemeLogo} from "../../img/icons/scheme.svg";
 import {ReactComponent as PeopleLogo} from "../../img/icons/people.svg";
 
 const Activity = () => {
+    const data = {
+        posts: [
+            {
+            title: 'Sunset Krasnoyarsk',
+            time: 53
+            },
+            {
+                title: 'Morning of Siberia',
+                time: 56
+            },
+        ]
+    }
     return (
         <div className="activity-wrap">
             <ul className="activity-list">
-                <li></li>
+                <li className="activity-list__item">
+                    <div className="post"></div>
+                </li>
+                {data.posts.map(post => (
+                    <li className="activity-list__item">
+                        <ShortPostView post = {post}/>
+                    </li>
+                ))}
+                
             </ul>
             <div className="side-bar">
                 <div className="user-card">
                     <img src="./img/user-logo.jpg" alt="User logo" className="user-card__logo"/>
                     <div className="user-card__info">
-                        <p className="user-card__info_name">Hanna Dorman</p>
-                        <p className="user-card__info_profession">UX/UI designer</p>
+                        <p className="user-card__info_name">Dmitrii Borozdin</p>
+                        <p className="user-card__info_profession">Frontend developer</p>
                     </div>
                     <div className="user-card__links">
-                        <TelegramLogo/>
-                        <HHruLogo/>
-                        <TwitterLogo/>
+                        <a href = "https://t.me/DmBorozdin"><TelegramLogo/></a>
+                        <a href="https://novosibirsk.hh.ru/resume/341d9996ff0b88f0480039ed1f666d67466156"><HHruLogo/></a>
+                        <a href="https://twitter.com"><TwitterLogo/></a>
                     </div>
                 </div>
                 <div className="side-bar__menu">
