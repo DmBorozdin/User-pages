@@ -1,5 +1,14 @@
 @import '../app/vars.scss';
 
+main{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $black;
+}
+
 .menu{
     height: 40px;
     background-color: $bg2;

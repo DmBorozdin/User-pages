@@ -7,18 +7,18 @@ import NotFoundScreen from "../not-found-screen/not-fount-screen";
 import { APPRoute, MenuLeftItem } from "../../const";
 
 const App = () => {
-    const [activeLeftMenu, setActiveLeftMenu] = useState(MenuLeftItem.MAP.name);
+    const [activeLeftMenu, setActiveLeftMenu] = useState(MenuLeftItem.ACTIVITY.name);
     return (
         <BrowserRouter>
             <Switch>
                 <Route path = {APPRoute.MAIN} exact>
-                    <Activity activeLeftMenu = {activeLeftMenu}/>
+                    <Activity activeLeftMenu = {activeLeftMenu} setActiveLeftMenu = {setActiveLeftMenu}/>
                 </Route>
                 <Route path = {APPRoute.MAP} exact>
-                    <Map/>
+                    <Map activeLeftMenu = {activeLeftMenu} setActiveLeftMenu = {setActiveLeftMenu}/>
                 </Route>
                 <Route path = {APPRoute.TIME} exact>
-                    <Time/>
+                    <Time activeLeftMenu = {activeLeftMenu} setActiveLeftMenu = {setActiveLeftMenu}/>
                 </Route>
                 <Route>
                     <NotFoundScreen/>

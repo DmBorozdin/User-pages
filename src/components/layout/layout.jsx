@@ -12,7 +12,7 @@ import {ReactComponent as PhotosLogo} from "../../img/icons/photos.svg";
 import {ReactComponent as SettingsLogo} from "../../img/icons/settings.svg";
 import {ReactComponent as ArrowDownLogo} from "../../img/icons/arrow-down.svg";
 
-const Layout = ({ children, activeLeftMenu }) => {
+const Layout = ({ children, activeLeftMenu,  setActiveLeftMenu}) => {
     return (
         <Fragment>
             <header className="page-header">
@@ -40,7 +40,7 @@ const Layout = ({ children, activeLeftMenu }) => {
                     <ul className="menu__left">
                         {Object.values(MenuLeftItem).map(menuItem => {
                             return <li className={`menu__item ${activeLeftMenu === menuItem.name ? 'menu__item_active' : ''}`} key={menuItem.name}>
-                                <Link to = {menuItem.route} className="menu__item_link">
+                                <Link to = {menuItem.route} className = "menu__item_link" onClick = {() => setActiveLeftMenu(menuItem.name)}>
                                     {menuItem.logo}
                                     {menuItem.name}
                                 </Link>
