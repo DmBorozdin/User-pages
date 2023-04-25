@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import withLayout from "../../hocs/with-layout";
 import "./activity.scss";
 import ShortPostView from "../short-post-view/short-post-view";
+import Post from "../post/post";
 import {ReactComponent as TelegramLogo} from "../../img/icons/telegram.svg";
 import {ReactComponent as HHruLogo} from "../../img/icons/hh.ru.svg";
 import {ReactComponent as TwitterLogo} from "../../img/icons/twitter.svg";
@@ -16,7 +17,18 @@ import {ReactComponent as PeopleLogo} from "../../img/icons/people.svg";
 
 const Activity = () => {
     const data = {
-        posts: [
+        post: {
+            user: {
+                name: 'Jason',
+                surname: 'Anderson'
+            },
+            img: './img/abstract-art.jpg',
+            text: 'Don’t sit and wait. Get out there, feel life. Touch the sun, and immerse in the sea. Keep love in your heart. A life without it is like a sunless garden when the flowers are dead. Because summer is passion, memories, light breeze, the sun that appears on the skin and caresses the face.',
+            time: '10:30 am',
+            views: 432,
+            commentsNumber: 47
+        },
+        shortPosts: [
             {
             title: 'Sunset Krasnoyarsk',
             time: 53
@@ -31,10 +43,10 @@ const Activity = () => {
         <div className="activity-wrap">
             <ul className="activity-list">
                 <li className="activity-list__item">
-                    <div className="post"></div>
+                    <Post data = {data.post}/>
                 </li>
-                {data.posts.map(post => (
-                    <li className="activity-list__item">
+                {data.shortPosts.map((post, index) => (
+                    <li className="activity-list__item" key={`${post.title} ${index}`}>
                         <ShortPostView post = {post}/>
                     </li>
                 ))}

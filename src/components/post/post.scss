@@ -1,0 +1,58 @@
+@import '../app/vars.scss';
+
+.post{
+    padding: 56px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.post__author{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    & p{
+        margin: 0;
+        color: $blue;
+        & span {
+            color: $black;
+        }
+    }
+}
+
+.post__img {
+    width: 100%;
+}
+
+.post__info {
+    border-left: 2px solid $grey;
+    padding-left: 8px;
+}
+
+.post__info_text {
+    margin: 0 0 16px;
+}
+
+.post__info_time {
+    margin: 0;
+    color: $secondTx;
+    & span {
+        font-style: italic;
+    }
+}
+
+.post__more-info{
+    display: flex;
+    gap: 32px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.post__more-info_item{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    & p {
+        margin: 0;
+    }
+}

@@ -1,0 +1,35 @@
+@import '../app/vars.scss';
+
+.map {
+    width: 100%;
+    & div {
+        aspect-ratio: 3/1;
+    }
+}
+
+.map-wrap {
+    background-color: $white;
+    padding: 16px 32px 32px;
+}
+
+.map-wrap__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    & p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.map-wrap__tools{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.map-wrap__tools_chevron {
+    transform: rotate(180deg);
+}
