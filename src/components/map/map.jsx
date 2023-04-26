@@ -26,7 +26,7 @@ const Map = () => {
             <div className={`map-wrap__header ${!showMap ? 'map-wrap__header_map-hiden':''}`}>
                 <p>Basic map</p>
                 <div className="map-wrap__tools">
-                    <ChevronDownLogo className="map-wrap__tools_chevron" onClick={() => setShowMap(!showMap)}/>
+                    <ChevronDownLogo className={`map-wrap__tools_chevron ${!showMap ? 'map-wrap__tools_map-hiden':''}`} onClick={() => setShowMap(!showMap)}/>
                     <UpdateLogo onClick={handleReset}/>
                     <CloseLogo/>
                 </div>

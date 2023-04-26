@@ -42,5 +42,10 @@
 }
 
 .map-wrap__tools_chevron {
+    // transform: rotate(180deg);
+    transition: transform ease-out 0.5s;
+}
+
+.map-wrap__tools_map-hiden {
     transform: rotate(180deg);
 }
