@@ -10,7 +10,12 @@ import { APPRoute, MenuLeftItem } from "../../const";
 const App = () => {
     const [activeLeftMenu, setActiveLeftMenu] = useState(MenuLeftItem.ACTIVITY.name);
     return (
-        <YMaps>
+        <YMaps
+            query={{
+                apikey: "2c33021e-1504-4cca-aa7a-961ad4818c83",
+                lang: "ru_RU"
+            }}
+        >
             <BrowserRouter>
                 <Switch>
                     <Route path = {APPRoute.MAIN} exact>

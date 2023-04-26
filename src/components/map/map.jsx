@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import withLayout from "../../hocs/with-layout";
 import { Map as YMap, Placemark } from "@pbe/react-yandex-maps";
 import "./map.scss"
@@ -9,26 +9,37 @@ import Preloader from "../preloader/preloader";
 
 const Map = () => {
     const [loaded, setLoaded] = useState(true);
+    const defaultMapState = { 
+        center: [55.06, 82.9045], 
+        zoom: 16,
+        controls: ["zoomControl", "fullscreenControl"], 
+    };
+    const [showMap, setShowMap] = useState(true);
+    const mapRef = useRef(null);
+    const handleReset = () => {
+        mapRef.current.setCenter(defaultMapState.center);
+        mapRef.current.setZoom(defaultMapState.zoom);
+    }
+
     return (
         <div className="map-wrap">
-            <div className="map-wrap__header">
+            <div className={`map-wrap__header ${!showMap ? 'map-wrap__header_map-hiden':''}`}>
                 <p>Basic map</p>
                 <div className="map-wrap__tools">
-                    <ChevronDownLogo className="map-wrap__tools_chevron"/>
-                    <UpdateLogo/>
+                    <ChevronDownLogo className="map-wrap__tools_chevron" onClick={() => setShowMap(!showMap)}/>
+                    <UpdateLogo onClick={handleReset}/>
                     <CloseLogo/>
                 </div>
             </div>
             {loaded && <Preloader/>}
-            <div className="map" style={{display: loaded ? 'none':'block'}}>
-                <YMap defaultState={{ 
-                    center: [55.06, 82.9045], 
-                    zoom: 16,
-                    controls: ["zoomControl", "fullscreenControl"], 
-                    }}
+            <div className={`map ${loaded || !showMap ? 'map_hiden':''}`}>
+                <YMap 
+                    defaultState={defaultMapState}
                     modules={["control.ZoomControl", "control.FullscreenControl"]}
                     width={'100%'} 
                     height={'auto'}
+                    onLoad = {() => setLoaded(false)}
+                    instanceRef={mapRef}
                 >
                     <Placemark
                         modules={["geoObject.addon.balloon"]}
@@ -37,7 +48,6 @@ const Map = () => {
                             balloonContentBody:
                             "Новосибирск, ул.Дачная 21/2",
                         }}
-                        onLoad = {() => setLoaded(false)}
                     />
                 </YMap>
             </div>

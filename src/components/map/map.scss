@@ -7,6 +7,10 @@
     }
 }
 
+.map_hiden {
+    display: none;
+}
+
 .map-wrap {
     background-color: $white;
     padding: 16px 32px 32px;
@@ -24,10 +28,17 @@
     }
 }
 
+.map-wrap__header_map-hiden {
+    margin-bottom: 0;
+}
+
 .map-wrap__tools{
     display: flex;
     gap: 8px;
     align-items: center;
+    & svg {
+        cursor: pointer;
+    }
 }
 
 .map-wrap__tools_chevron {
