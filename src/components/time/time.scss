@@ -1,38 +1,35 @@
 @import '../app/vars.scss';
 
-.map {
-    width: 100%;
-    & div {
-        aspect-ratio: 3/1;
-    }
-}
-
-.map_hiden {
+.timer_hiden {
     display: none;
 }
 
-.map-wrap {
-    background-color: $white;
-    padding: 16px 32px 32px;
+.timer__time {
+    margin: 0;
 }
 
-.map-wrap__header {
+.timer-wrap {
+    background-color: $white;
+    padding: 16px 32px 32px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.timer-wrap__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     & p {
         margin: 0;
-        font-size: 16px;
-        line-height: 19px;
     }
 }
 
-.map-wrap__header_map-hiden {
+.timer-wrap__header_timer-hiden {
     margin-bottom: 0;
 }
 
-.map-wrap__tools{
+.timer-wrap__tools{
     display: flex;
     gap: 8px;
     align-items: center;
@@ -41,10 +38,10 @@
     }
 }
 
-.map-wrap__tools_chevron {
+.timer-wrap__tools_chevron {
     transition: transform ease-out 0.5s;
 }
 
-.map-wrap__tools_map-hiden {
+.timer-wrap__tools_timer-hiden {
     transform: rotate(180deg);
 }

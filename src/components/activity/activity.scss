@@ -157,3 +157,37 @@
     display: flex;
     gap: 8px;
 }
+
+@media screen and (max-width: 1024px) {
+    .activity-list {
+        gap: 24px;
+    }
+
+    .activity-wrap {
+        gap: 24px;
+    }
+
+    .side-bar {
+        gap: 24px;
+    }
+
+    .side-bar__menu{
+        height: 282px;
+    }
+
+    .side-bar__menu_item{
+        padding: 6px 12px;
+        gap: 12px;
+    }
+
+    .side-bar__navigation {
+        padding: 12px 0;
+        margin-bottom: 6px;
+    }
+
+    .user-card {
+        padding-top: 24px;
+        gap: 12px;
+        height: 272px;
+    }
+}

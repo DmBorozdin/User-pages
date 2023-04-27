@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import withLayout from "../../hocs/with-layout";
 import "./activity.scss";
 import ShortPostView from "../short-post-view/short-post-view";
@@ -60,8 +59,8 @@ const Activity = () => {
                         <p className="user-card__info_profession">Frontend developer</p>
                     </div>
                     <div className="user-card__links">
-                        <a href = "https://t.me/DmBorozdin"><TelegramLogo/></a>
-                        <a href="https://novosibirsk.hh.ru/resume/341d9996ff0b88f0480039ed1f666d67466156"><HHruLogo/></a>
+                        <a href = "https://t.me/DmBorozdin" target={'_blank'}  rel="noreferrer"><TelegramLogo/></a>
+                        <a href="https://novosibirsk.hh.ru/resume/341d9996ff0b88f0480039ed1f666d67466156" target={'_blank'}  rel="noreferrer"><HHruLogo/></a>
                         <a href="https://twitter.com"><TwitterLogo/></a>
                     </div>
                 </div>
@@ -117,4 +116,6 @@ const Activity = () => {
     )
 };
 
-export default withLayout(Activity);
+export default React.memo(withLayout(Activity), (prevProps, nextProps) => {
+    return prevProps.activeLeftMenu === nextProps.activeLeftMenu;
+});

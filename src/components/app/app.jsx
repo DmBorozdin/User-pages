@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { YMaps } from "@pbe/react-yandex-maps";
 import Activity from "../activity/activity";
@@ -9,6 +9,23 @@ import { APPRoute, MenuLeftItem } from "../../const";
 
 const App = () => {
     const [activeLeftMenu, setActiveLeftMenu] = useState(MenuLeftItem.ACTIVITY.name);
+    const [[h, m, s], setTime] = useState([0, 0, 0]);
+
+    const tick = () => {
+        if (m === 59 && s === 59) {
+          setTime([h + 1, 0, 0]);
+        } else if (s === 59) {
+          setTime([h, m + 1, 0]);
+        } else {
+          setTime([h, m, s + 1]);
+        }
+      };
+
+    useEffect(() => {
+        const timerID = setInterval(() => tick(), 1000);
+        return () => clearInterval(timerID);
+      });
+
     return (
         <YMaps
             query={{
@@ -25,7 +42,7 @@ const App = () => {
                         <Map activeLeftMenu = {activeLeftMenu} setActiveLeftMenu = {setActiveLeftMenu}/>
                     </Route>
                     <Route path = {APPRoute.TIME} exact>
-                        <Time activeLeftMenu = {activeLeftMenu} setActiveLeftMenu = {setActiveLeftMenu}/>
+                        <Time activeLeftMenu = {activeLeftMenu} setActiveLeftMenu = {setActiveLeftMenu} hours = {h} minutes = {m} seconds = {s}/>
                     </Route>
                     <Route>
                         <NotFoundScreen/>
