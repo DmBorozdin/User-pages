@@ -63,7 +63,25 @@
         gap: 12px;
     }
 
+    .post__author{
+        gap: 6px;
+    }
+
+    .post__info {
+        padding-left: 6px;
+    }
+
     .post__info_text {
         margin: 0 0 12px;
+    }
+
+    .post__more-info{
+        gap: 24px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .post__more-info_item{
+        gap: 6px;
     }
 }

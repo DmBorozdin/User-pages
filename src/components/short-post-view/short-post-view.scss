@@ -27,5 +27,15 @@
 @media screen and (max-width: 1024px) {
     .post-short-view {
         padding: 14px 24px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .post-short-view__info {
+        gap: 6px;
+    }
+
+    .post-short-view__info_text {
+        margin: 0 6px 0 0;
     }
 }
