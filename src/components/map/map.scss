@@ -13,14 +13,14 @@
 
 .map-wrap {
     background-color: $white;
-    padding: 16px 32px 32px;
+    padding: $gap $gap*2 $gap*2;
 }
 
 .map-wrap__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: $gap;
     & p {
         margin: 0;
         font-size: 16px;
@@ -34,10 +34,12 @@
 
 .map-wrap__tools{
     display: flex;
-    gap: 8px;
+    gap: calc($gap / 2);
     align-items: center;
     & svg {
         cursor: pointer;
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -47,4 +49,54 @@
 
 .map-wrap__tools_map-hiden {
     transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1024px) {
+    .map-wrap {
+        padding: $middleGap $middleGap*2 $middleGap*2;
+    }
+    
+    .map-wrap__header {
+        margin-bottom: $middleGap;
+        & p {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+    
+    .map-wrap__tools{
+        gap: calc($middleGap/2);
+        & svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .map {
+        & div {
+            aspect-ratio: 3/2;
+        }
+    }
+
+    .map-wrap {
+        padding: $smallGap $smallGap*2 $smallGap*2;
+    }
+    
+    .map-wrap__header {
+        margin-bottom: $smallGap;
+        & p {
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+    
+    .map-wrap__tools{
+        gap: calc($middleGap/2);
+        & svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
 }

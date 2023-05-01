@@ -10,16 +10,16 @@
 
 .timer-wrap {
     background-color: $white;
-    padding: 16px 32px 32px;
-    font-size: 16px;
-    line-height: 19px;
+    padding: $gap $gap*2 $gap*2;
+    font-size: $gap;
+    line-height: $gap + 3px;
 }
 
 .timer-wrap__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 32px;
+    margin-bottom: $gap*2;
     & p {
         margin: 0;
     }
@@ -31,10 +31,12 @@
 
 .timer-wrap__tools{
     display: flex;
-    gap: 8px;
+    gap: calc($gap / 2);
     align-items: center;
     & svg {
         cursor: pointer;
+        width: 24px;
+        height: 24px;
     }
 }
 
@@ -44,4 +46,44 @@
 
 .timer-wrap__tools_timer-hiden {
     transform: rotate(180deg);
+}
+
+@media screen and (max-width: 1024px) {
+    .timer-wrap {
+        padding: $middleGap $middleGap*2 $middleGap*2;
+        font-size: $middleGap+2px;
+        line-height: $middleGap+4px;
+    }
+    
+    .timer-wrap__header {
+        margin-bottom: $middleGap*2;
+    }
+    
+    .timer-wrap__tools{
+        gap: calc($middleGap / 2);
+        & svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timer-wrap {
+        padding: $smallGap $smallGap*2 $smallGap*2;
+        font-size: 10px;
+        line-height: 12px;
+    }
+    
+    .timer-wrap__header {
+        margin-bottom: $smallGap*2;
+    }
+    
+    .timer-wrap__tools{
+        gap: calc($smallGap / 2);
+        & svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
 }

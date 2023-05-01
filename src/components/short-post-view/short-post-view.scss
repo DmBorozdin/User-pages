@@ -1,7 +1,10 @@
+@import '../app/vars.scss';
+
 .post-short-view {
-    padding: 18px 32px;
+    padding: $gap+2px $gap*2;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 16px;
     line-height: 19px;
 }
@@ -9,11 +12,11 @@
 .post-short-view__info {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: calc($gap/2);
 }
 
 .post-short-view__info_text {
-    margin: 0 8px 0 0;
+    margin: 0 calc($gap/2) 0 0;
 }
 
 .post-short-view__info_chevron-down {
@@ -26,16 +29,32 @@
 
 @media screen and (max-width: 1024px) {
     .post-short-view {
-        padding: 14px 24px;
+        padding: $middleGap+2px $middleGap;
         font-size: 14px;
         line-height: 16px;
     }
 
     .post-short-view__info {
-        gap: 6px;
+        gap: calc($middleGap/2);
     }
 
     .post-short-view__info_text {
-        margin: 0 6px 0 0;
+        margin: 0 calc($middleGap/2) 0 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .post-short-view {
+        padding: $smallGap+2px $smallGap;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .post-short-view__info {
+        gap: calc($smallGap/2);
+    }
+
+    .post-short-view__info_text {
+        margin: 0 calc($smallGap/2) 0 0;
     }
 }

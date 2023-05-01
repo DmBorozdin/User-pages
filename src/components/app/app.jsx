@@ -4,11 +4,11 @@ import { YMaps } from "@pbe/react-yandex-maps";
 import Activity from "../activity/activity";
 import Map from "../map/map";
 import Time from "../time/time";
-import NotFoundScreen from "../not-found-screen/not-fount-screen";
-import { APPRoute, MenuLeftItem } from "../../const";
+import CV from "../cv/cv";
+import NotFoundScreen from "../not-found-screen/not-found-screen";
+import { APPRoute} from "../../const";
 
 const App = () => {
-    const [activeLeftMenu, setActiveLeftMenu] = useState(MenuLeftItem.ACTIVITY.name);
     const [[h, m, s], setTime] = useState([0, 0, 0]);
 
     const tick = () => {
@@ -36,13 +36,16 @@ const App = () => {
             <BrowserRouter>
                 <Switch>
                     <Route path = {APPRoute.MAIN} exact>
-                        <Activity activeLeftMenu = {activeLeftMenu} setActiveLeftMenu = {setActiveLeftMenu}/>
+                        <Activity/>
                     </Route>
                     <Route path = {APPRoute.MAP} exact>
-                        <Map activeLeftMenu = {activeLeftMenu} setActiveLeftMenu = {setActiveLeftMenu}/>
+                        <Map/>
                     </Route>
                     <Route path = {APPRoute.TIME} exact>
-                        <Time activeLeftMenu = {activeLeftMenu} setActiveLeftMenu = {setActiveLeftMenu} hours = {h} minutes = {m} seconds = {s}/>
+                        <Time hours = {h} minutes = {m} seconds = {s}/>
+                    </Route>
+                    <Route path = {APPRoute.CV} exact>
+                        <CV/>
                     </Route>
                     <Route>
                         <NotFoundScreen/>

@@ -1,7 +1,7 @@
-import React, {Fragment} from "react";
-import { Link } from "react-router-dom";
+import React, {Fragment, useEffect, useState} from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./layout.scss";
-import { MenuLeftItem } from "../../const";
+import { MenuLeftItem, APPRoute } from "../../const";
 import {ReactComponent as StatisticsLogo} from "../../img/icons/statistics.svg";
 import {ReactComponent as ArrowBackLogo} from "../../img/icons/arrow-back.svg";
 import {ReactComponent as InvoicesLogo} from "../../img/icons/calculate.svg";
@@ -12,7 +12,28 @@ import {ReactComponent as PhotosLogo} from "../../img/icons/photos.svg";
 import {ReactComponent as SettingsLogo} from "../../img/icons/settings.svg";
 import {ReactComponent as ArrowDownLogo} from "../../img/icons/arrow-down.svg";
 
-const Layout = ({ children, activeLeftMenu,  setActiveLeftMenu}) => {
+const Layout = ({ children}) => {
+    const location = useLocation();
+    const [activeLeftMenu, setActiveLeftMenu] = useState(MenuLeftItem.ACTIVITY.name);
+
+    useEffect(() => {
+        let activeMenu = '';
+        switch (location.pathname) {
+            case APPRoute.MAIN: 
+                activeMenu = MenuLeftItem.ACTIVITY.name;
+                break;
+            case APPRoute.MAP: 
+                activeMenu = MenuLeftItem.MAP.name;
+                break;
+            case APPRoute.TIME: 
+                activeMenu = MenuLeftItem.TIME.name;
+                break;
+            default:
+                activeMenu = '';
+        }
+        setActiveLeftMenu(activeMenu);
+    }, [location]);
+    
     return (
         <Fragment>
             <header className="page-header">
@@ -40,7 +61,7 @@ const Layout = ({ children, activeLeftMenu,  setActiveLeftMenu}) => {
                     <ul className="menu__left">
                         {Object.values(MenuLeftItem).map(menuItem => {
                             return <li className={`menu__item ${activeLeftMenu === menuItem.name ? 'menu__item_active' : ''}`} key={menuItem.name}>
-                                <Link to = {menuItem.route} className = "menu__item_link" onClick = {() => setActiveLeftMenu(menuItem.name)}>
+                                <Link to = {menuItem.route} className = "menu__item_link">
                                     {menuItem.logo}
                                     {menuItem.name}
                                 </Link>
@@ -62,7 +83,7 @@ const Layout = ({ children, activeLeftMenu,  setActiveLeftMenu}) => {
                         </div>
                         <div className="menu__right_item">
                             <SettingsLogo/>
-                            <ArrowDownLogo/>
+                            <ArrowDownLogo className="menu__right_chevron"/>
                         </div>
                     </div>
                 </div>

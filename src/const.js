@@ -7,6 +7,7 @@ export const APPRoute = {
     MAIN: `/`,
     MAP: `/map`,
     TIME: `/time`,
+    CV: `/cv`,
 };
 
 export const MenuLeftItem = {

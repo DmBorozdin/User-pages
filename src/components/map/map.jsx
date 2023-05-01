@@ -55,6 +55,4 @@ const Map = () => {
     )
 };
 
-export default React.memo(withLayout(Map), (prevProps, nextProps) => {
-    return prevProps.activeLeftMenu === nextProps.activeLeftMenu;
-});
+export default React.memo(withLayout(Map));

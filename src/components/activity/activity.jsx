@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import withLayout from "../../hocs/with-layout";
 import "./activity.scss";
 import ShortPostView from "../short-post-view/short-post-view";
@@ -13,6 +14,7 @@ import {ReactComponent as PersonLogo} from "../../img/icons/person.svg";
 import {ReactComponent as FinanceLogo} from "../../img/icons/finance.svg";
 import {ReactComponent as SchemeLogo} from "../../img/icons/scheme.svg";
 import {ReactComponent as PeopleLogo} from "../../img/icons/people.svg";
+import { APPRoute } from "../../const";
 
 const Activity = () => {
     const data = {
@@ -54,10 +56,12 @@ const Activity = () => {
             <div className="side-bar">
                 <div className="user-card">
                     <img src="./img/user-logo.jpg" alt="User logo" className="user-card__logo"/>
-                    <div className="user-card__info">
-                        <p className="user-card__info_name">Dmitrii Borozdin</p>
-                        <p className="user-card__info_profession">Frontend developer</p>
-                    </div>
+                    <Link to={APPRoute.CV} className="user-card__cv-link">
+                        <div className="user-card__info">
+                            <p className="user-card__info_name">Dmitrii Borozdin</p>
+                            <p className="user-card__info_profession">Frontend developer</p>
+                        </div>
+                    </Link>
                     <div className="user-card__links">
                         <a href = "https://t.me/DmBorozdin" target={'_blank'}  rel="noreferrer"><TelegramLogo/></a>
                         <a href="https://novosibirsk.hh.ru/resume/341d9996ff0b88f0480039ed1f666d67466156" target={'_blank'}  rel="noreferrer"><HHruLogo/></a>
@@ -116,6 +120,4 @@ const Activity = () => {
     )
 };
 
-export default React.memo(withLayout(Activity), (prevProps, nextProps) => {
-    return prevProps.activeLeftMenu === nextProps.activeLeftMenu;
-});
+export default React.memo(withLayout(Activity));

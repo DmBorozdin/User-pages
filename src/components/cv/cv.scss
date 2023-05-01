@@ -1,0 +1,158 @@
+@import '../app/vars.scss';
+
+.cv {
+    background-color: $white;
+    padding: $gap $gap*2 $gap*2;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    & p {
+        margin: 0;
+    }
+}
+
+.cv__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid $grey;
+    padding-bottom: calc($gap/2);
+}
+
+.cv__logo{
+    width: 120px;
+    height: 120px;
+}
+
+.cv__personal-info {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+
+    & ul {
+        text-decoration: none;
+        list-style-type: none;
+    }
+}
+
+.cv__personal-info_contacts {
+    display: flex;
+    flex-direction: column;
+    gap: calc($gap/2);
+    & span {
+        color: $secondTx;
+    }
+}
+
+.cv__personal-info_list {
+    margin: 0;
+    padding: 0;
+}
+
+.cv__personal-info_name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.cv__skills {
+    display: flex;
+    flex-direction: column;
+    gap: calc($gap/2);
+}
+
+.cv__skills_title {
+    color: $secondTx;
+}
+
+.cv__skills_list {
+    margin: 0;
+    padding-left: $gap;
+    list-style-type: "-";
+    & li {
+        padding-left: calc($gap/2);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .cv {
+        padding: $middleGap $middleGap*2 $middleGap*2;
+        gap: $middleGap;
+    }
+    
+    .cv__header {
+        padding-bottom: calc($middleGap/2);
+    }
+    
+    .cv__logo{
+        width: 110px;
+        height: 110px;
+    }
+    
+    .cv__personal-info {
+        gap: $middleGap;
+    }
+    
+    .cv__personal-info_contacts {
+        gap: calc($middleGap/2);
+    }
+    
+    .cv__personal-info_name {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    
+    .cv__skills {
+        gap: calc($middleGap/2);
+    }
+    
+    .cv__skills_list {
+        padding-left: $middleGap;
+        & li {
+            padding-left: calc($middleGap/2);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cv {
+        padding: $smallGap $smallGap*2 $smallGap*2;
+        gap: $smallGap;
+    }
+    
+    .cv__header {
+        padding-bottom: calc($smallGap/2);
+    }
+    
+    .cv__logo{
+        width: 80px;
+        height: 80px;
+    }
+    
+    .cv__personal-info {
+        gap: $smallGap;
+    }
+    
+    .cv__personal-info_contacts {
+        gap: calc($smallGap/2);
+    }
+    
+    .cv__personal-info_name {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 14px;
+    }
+    
+    .cv__skills {
+        gap: calc($smallGap/2);
+    }
+    
+    .cv__skills_list {
+        padding-left: $smallGap;
+        & li {
+            padding-left: calc($smallGap/2);
+        }
+    }
+}

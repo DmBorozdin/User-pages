@@ -1,15 +1,15 @@
 @import '../app/vars.scss';
 
 .post{
-    padding: 56px 32px 32px;
+    padding: calc($gap*3 + $gap/2) $gap $gap;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: $gap;
 }
 
 .post__author{
     display: flex;
-    gap: 8px;
+    gap: calc($gap/2);
     align-items: center;
     & p{
         margin: 0;
@@ -26,11 +26,11 @@
 
 .post__info {
     border-left: 2px solid $grey;
-    padding-left: 8px;
+    padding-left: calc($gap/2);
 }
 
 .post__info_text {
-    margin: 0 0 16px;
+    margin: 0 0 $gap;
 }
 
 .post__info_time {
@@ -43,14 +43,14 @@
 
 .post__more-info{
     display: flex;
-    gap: 32px;
+    gap: $gap*2;
     font-size: 16px;
     line-height: 19px;
 }
 
 .post__more-info_item{
     display: flex;
-    gap: 8px;
+    gap: calc($gap/2);
     align-items: center;
     & p {
         margin: 0;
@@ -59,29 +59,58 @@
 
 @media screen and (max-width: 1024px) {
     .post {
-        padding: 42px 24px 24px;
-        gap: 12px;
+        padding: calc($middleGap*3 + $middleGap/2) $middleGap*2 $middleGap*2;
+        gap: $middleGap;
     }
 
     .post__author{
-        gap: 6px;
+        gap: calc($middleGap/2);
     }
 
     .post__info {
-        padding-left: 6px;
+        padding-left: calc($middleGap/2);
     }
 
     .post__info_text {
-        margin: 0 0 12px;
+        margin: 0 0 $middleGap;
     }
 
     .post__more-info{
-        gap: 24px;
+        gap: $middleGap*2;
         font-size: 14px;
         line-height: 16px;
     }
 
     .post__more-info_item{
-        gap: 6px;
+        gap: calc($middleGap/2);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .post {
+        padding: calc($smallGap*3 + $smallGap/2) $smallGap*2 $smallGap*2;
+        gap: $smallGap;
+    }
+
+    .post__author{
+        gap: calc($smallGap/2);
+    }
+
+    .post__info {
+        padding-left: calc($smallGap/2);
+    }
+
+    .post__info_text {
+        margin: 0 0 $smallGap;
+    }
+
+    .post__more-info{
+        gap: $smallGap*2;
+        font-size: 10px;
+        line-height: 12px;
+    }
+
+    .post__more-info_item{
+        gap: calc($smallGap/2);
     }
 }

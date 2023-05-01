@@ -1,13 +1,9 @@
 @import '../app/vars.scss';
 
 .activity-wrap {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: flex;
-    gap: 32px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: $gap*2;
 }
 
 .activity-list{
@@ -17,7 +13,7 @@
     margin: 0;
     padding: 0;
     flex-grow: 4;
-    gap: 32px;
+    gap: $gap*2;
 }
 
 .activity-list__item {
@@ -29,7 +25,7 @@
     max-width: 264px;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: $gap*2;
     flex-grow: 1;
     & > div {
         background-color: $white;
@@ -37,7 +33,7 @@
 }
 
 .side-bar__menu {
-    padding-bottom: 10px;
+    padding-bottom: calc($gap/2 + 2px);
 }
 
 .side-bar__menu_count {
@@ -56,10 +52,10 @@
 }
 
 .side-bar__menu_item, .side-bar__review_item {
-    padding: 8px 16px;
+    padding: calc($gap/2) $gap;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: $gap;
     & span  {
         flex-grow: 1;
     }
@@ -70,19 +66,18 @@
 }
 
 .side-bar__menu_title, .side-bar__review_title {
-    line-height: 20px;
     font-weight: 500;
 }
 
 .side-bar__navigation {
     border-top: 1px solid $grey;
     border-bottom: 1px solid $grey;
-    padding: 16px 0;
-    margin-bottom: 8px;
+    padding: $gap 0;
+    margin-bottom: calc($gap/2);
 }
 
 .side-bar__review {
-    padding-bottom: 8px;
+    padding-bottom: calc($gap/2);
 }
 
 .side-bar__review_btn {
@@ -114,22 +109,27 @@
     height: 88px;
     border: 1px solid $grey;
     border-radius: 4px;
-    padding: 8px 16px;
+    padding: calc($gap/2) $gap;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 20px;
+    line-height: 16px;
 }
 
 .user-card{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 32px 0 35px;
-    gap: 16px;
+    padding: $gap*2 0 $gap*2 + 3px;
+    gap: $gap;
     box-sizing: border-box;
+}
+
+.user-card__cv-link {
+    text-decoration: none;
+    color: $black;
 }
 
 .user-card__info {
@@ -138,7 +138,7 @@
         text-align: center;
     }
     & p:first-child {
-        margin-bottom: 8px;
+        margin-bottom: calc($gap/2);
     }
 } 
 
@@ -159,17 +159,23 @@
 
 .user-card__links{
     display: flex;
-    gap: 8px;
-    height: 20px;
+    gap: calc($gap/2);
+    height: $gap + 4px;
+}
+
+@media screen and (min-width: 1400px) {
+    .activity-wrap {
+        grid-template-columns: auto 264px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
     .activity-list {
-        gap: 24px;
+        gap: $middleGap*2;
     }
 
     .activity-wrap {
-        gap: 24px;
+        gap: $middleGap*2;
         & svg {
             width: 20px;
             height: 20px;
@@ -177,51 +183,47 @@
     }
 
     .side-bar {
-        gap: 24px;
+        gap: $middleGap*2;
     }
 
     .side-bar__menu{
-        padding-bottom: 8px;
+        padding-bottom: calc($middleGap/2) + 2px;
     }
 
     .side-bar__menu_item, .side-bar__review_item{
-        padding: 6px 12px;
-        gap: 12px;
-    }
-
-    .side-bar__menu_title, .side-bar__review_title {
-        line-height: 16px;
+        padding: calc($middleGap/2) $middleGap;
+        gap: $middleGap;
     }
 
     .side-bar__navigation {
-        padding: 12px 0;
-        margin-bottom: 6px;
+        padding: $middleGap 0;
+        margin-bottom: calc($middleGap/2);
     }
 
     .side-bar__review {
-        padding-bottom: 6px;
+        padding-bottom: calc($middleGap/2);
     }
 
     .side-bar__review_btn {
         font-size: 12px;
-        line-height: 18px;
+        line-height: 22px;
     }
 
     .side-bar__review_input {
         height: 76px;
-        padding: 6px 12px;
+        padding: calc($middleGap/2) $middleGap;
         font-size: 12px;
         line-height: 16px;
     }
 
     .user-card {
-        padding: 24px 0 25px;
-        gap: 12px;
+        padding: $middleGap*2 0 $middleGap*2 + 1px;
+        gap: $middleGap;
     }
 
     .user-card__info {
         & p:first-child {
-            margin-bottom: 6px;
+            margin-bottom: calc($middleGap/2);
         }
     } 
 
@@ -236,11 +238,89 @@
     }
 
     .user-card__links{
-        gap: 6px;
-        height: 16px;
+        gap: calc($middleGap/2);
+        height: $middleGap + 4px;
         & svg {
             width: 16px;
             height: 16px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .activity-list {
+        gap: $smallGap*2;
+    }
+
+    .activity-wrap {
+        gap: $smallGap*2;
+        & svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    .side-bar {
+        gap: $smallGap*2;
+    }
+
+    .side-bar__menu{
+        padding-bottom: calc($smallGap/2) + 2px;
+    }
+
+    .side-bar__menu_item, .side-bar__review_item{
+        padding: calc($smallGap/2) $smallGap;
+        gap: $smallGap;
+    }
+
+    .side-bar__navigation {
+        padding: $smallGap 0;
+        margin-bottom: calc($smallGap/2);
+    }
+
+    .side-bar__review {
+        padding-bottom: calc($smallGap/2);
+    }
+
+    .side-bar__review_btn {
+        font-size: 8px;
+        line-height: 14px;
+    }
+
+    .side-bar__review_input {
+        height: 56px;
+        padding: calc($smallGap/2) $smallGap;
+        font-size: 8px;
+        line-height: 12px;
+    }
+
+    .user-card {
+        padding: $smallGap*2 0 $smallGap*2 + 1px;
+        gap: $smallGap;
+    }
+
+    .user-card__info {
+        & p:first-child {
+            margin-bottom: calc($smallGap/2);
+        }
+    } 
+
+    .user-card__info_name {
+        font-size: 12px;
+        line-height: 15 px;
+    }
+
+    .user-card__logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .user-card__links{
+        gap: calc($smallGap/2);
+        height: 12px;
+        & svg {
+            width: 12px;
+            height: 12px;
         }
     }
 }
