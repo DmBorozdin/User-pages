@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>User pages</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__top">
+          <div class="page-header__wrap"> 
+              <ArrowBackLogo/>
+              <p class="page-header__title">User pages - Profile</p>
+          </div>
+          <div class="page-header__tools">
+              <div class="page-header__tools_item">
+                  <StatisticsLogo/>
+                  Statistics
+              </div>
+              <div class="page-header__tools_item">
+                  <InvoicesLogo/>
+                  Invoices
+              </div>
+              <div class="page-header__tools_item">
+                  <ScheduleLogo/>
+                  Schedule
+              </div>
+          </div>
+      </div>
+      <div class="menu">
+          <ul class="menu__left">
+                <li class=`menu__item menu__item_active`>
+                    <a href="/" class = "menu__item_link">
+                        {menuItem.logo}
+                        Activity
+                    </a>
+                </li>
+                <li class=`menu__item`>
+                  <a href="/map" class = "menu__item_link">
+                      {menuItem.logo}
+                      Map
+                  </a>
+              </li>
+              <li class=`menu__item`>
+                <a href="/time" class = "menu__item_link">
+                    {menuItem.logo}
+                    Time
+                </a>
+            </li>
+          </ul>
+          <div class="menu__right">
+              <div class="menu__right_item">
+                  <NotesLogo/>
+                  Notes
+              </div>
+              <div class="menu__right_item">
+                  <FriendsLogo/>
+                  Friends
+              </div>
+              <div class="menu__right_item">
+                  <PhotosLogo/>
+                  Photos
+              </div>
+              <div class="menu__right_item">
+                  <SettingsLogo/>
+                  <ArrowDownLogo class="menu__right_chevron"/>
+              </div>
+          </div>
+      </div>
+  </header>
+  <main>
+      
+  </main>
+  </body>
+</html>
