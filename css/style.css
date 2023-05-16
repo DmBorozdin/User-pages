@@ -1,3 +1,8 @@
+body{
+    margin: 0;
+    background: #f1f1f1;
+}
+
 main{
     font-family: 'Roboto', sans-serif;
     font-style: normal;
@@ -30,7 +35,7 @@ main{
     background-color: #D3D8DE;
 }
 
-.menu__right_item :last-child {
+.menu__right_item:last-child {
     padding: 8px 16px;
 }
 
@@ -103,7 +108,7 @@ main{
         padding: 0px 24px;
     }
 
-    .menu svg {
+    .menu img {
         width: 16px;
         height: 16px;
     }
@@ -144,7 +149,7 @@ main{
         padding: 6px 24px;
     }
 
-    .page-header__top svg {
+    .page-header__top img {
         width: 20px;
         height: 20px;
     }
@@ -165,7 +170,7 @@ main{
         padding: 0px 12px;
     }
 
-    .menu svg {
+    .menu img {
         width: 12px;
         height: 12px;
     }
@@ -206,7 +211,7 @@ main{
         padding: 3px 12px;
     }
 
-    .page-header__top svg {
+    .page-header__top img {
         width: 16px;
         height: 16px;
     }
