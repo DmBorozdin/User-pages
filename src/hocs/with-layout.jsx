@@ -2,8 +2,8 @@ import React from "react";
 import Layout from "../components/layout/layout";
 
 const withLayout = Component => {
-    return props => (
-        <Layout>
+    return ({activeLeftMenu, setActiveLeftMenu, ...props}) => (
+        <Layout activeLeftMenu = {activeLeftMenu} setActiveLeftMenu = {setActiveLeftMenu}>
             <Component {...props}/>
         </Layout>
     );
