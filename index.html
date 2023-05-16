@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -73,7 +74,82 @@
       </div>
   </header>
   <main>
-      <div>Main</div>
+    <div class="activity-wrap">
+      <ul class="activity-list">
+          <li class="activity-list__item">
+              <Post data = {data.post}/>
+          </li>
+          {data.shortPosts.map((post, index) => (
+              <li class="activity-list__item" key={`${post.title} ${index}`}>
+                  <ShortPostView post = {post}/>
+              </li>
+          ))}
+          
+      </ul>
+      <div class="side-bar">
+          <div class="user-card">
+              <img src="./img/user-logo.jpg" alt="User logo" class="user-card__logo"/>
+              <Link to={APPRoute.CV} class="user-card__cv-link">
+                  <div class="user-card__info">
+                      <p class="user-card__info_name">Dmitrii Borozdin</p>
+                      <p class="user-card__info_profession">Frontend developer</p>
+                  </div>
+              </Link>
+              <div class="user-card__links">
+                  <a href = "https://t.me/DmBorozdin" target="_blank"  rel="noreferrer"><img src="./img/icons/telegram.svg" alt="Telegram logo"></a>
+                  <a href="https://novosibirsk.hh.ru/resume/341d9996ff0b88f0480039ed1f666d67466156" target="_blank"  rel="noreferrer"><img src="./img/icons/hh.ru.svg" alt="HH.ru logo"></a>
+                  <a href="https://twitter.com"><img src="./img/icons/twitter.svg" alt="Twitter logo"></a>
+              </div>
+          </div>
+          <div class="side-bar__menu">
+              <div class="side-bar__menu_item">
+                  <span class="side-bar__menu_title">Navigation</span>
+                  <img src="./img/icons/chevron-down.svg" alt="Chevron down logo">
+              </div>
+              <div class="side-bar__navigation">
+                  <div class="side-bar__menu_item">
+                      <img src="./img/icons/person.svg" alt="Person logo">
+                      <span>My profile</span>
+                  </div>
+                  <div class="side-bar__menu_item">
+                      <img src="./img/icons/finance.svg" alt="Finance logo">
+                      <span>Balance</span>
+                      <div class="side-bar__menu_balance-count">$ 1,430</div>
+                  </div>
+                  <div class="side-bar__menu_item">
+                      <img src="./img/icons/scheme.svg" alt="Scheme logo">
+                      <span>Connections</span>
+                      <div class="side-bar__menu_count side-bar__menu_connection-count">29</div>
+                  </div>
+                  <div class="side-bar__menu_item">
+                      <img src="./img/icons/people.svg" alt="People logo">
+                      <span>Friends</span>
+                  </div>
+              </div>
+              <div class="side-bar__menu_item">
+                  <img src="./img/icons/calendar.svg" alt="Calendar logo">
+                  <span>Events</span>
+                  <div class="side-bar__menu_count">45</div>
+              </div>
+              <div class="side-bar__menu_item">
+                  <img src="./img/icons/settings.svg" alt="Settings logo">
+                  Account settings
+              </div>
+          </div>
+          <div class="side-bar__review">
+              <div class="side-bar__review_item">
+                  <p class="side-bar__review_title">Share your thoughts</p>
+                  <img src="./img/icons/chevron-down.svg" alt="Chevron down logo">
+              </div>
+              <div class="side-bar__review_item">
+                  <textarea class="side-bar__review_input" placeholder="Enter your message..."></textarea>
+              </div>
+              <div class="side-bar__review_item">
+                  <button class="side-bar__review_btn" type="submit">Save</button>
+              </div>
+          </div>
+      </div>
+  </div>
   </main>
   </body>
 </html>
