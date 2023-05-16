@@ -19,6 +19,94 @@
     width: 100%;
 }
 
+.post{
+    padding: 56px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.post__author{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.post__author p{
+    margin: 0;
+    color: #5095EC;
+}
+
+.post__author p span {
+    color: #505050;
+}
+
+.post__img {
+    width: 100%;
+}
+
+.post__info {
+    border-left: 2px solid #D3D8DE;
+    padding-left: 8px;
+}
+
+.post__info_text {
+    margin: 0 0 16px;
+}
+
+.post__info_time {
+    margin: 0;
+    color: #8F8F8F;
+}
+
+.post__info_time  span {
+    font-style: italic;
+}
+
+.post__more-info{
+    display: flex;
+    gap: 32px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.post__more-info_item{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.post__more-info_item p {
+    margin: 0;
+}
+
+.post-short-view {
+    padding: 18px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.post-short-view__info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post-short-view__info_text {
+    margin: 0 8px 0 0;
+}
+
+.post-short-view__info_chevron-down {
+    transform: rotate(180deg);
+}
+
+.post-short-view__title {
+    margin: 0;
+}
+
 .side-bar {
     max-width: 264px;
     display: flex;
@@ -177,9 +265,45 @@
         gap: 24px;
     }
 
-    .activity-wrap  svg {
-        width: 20px;
-        height: 20px;
+    .post {
+        padding: 42px 24px 24px;
+        gap: 12px;
+    }
+
+    .post__author{
+        gap: 6px;
+    }
+
+    .post__info {
+        padding-left: 6px;
+    }
+
+    .post__info_text {
+        margin: 0 0 12px;
+    }
+
+    .post__more-info{
+        gap: 24px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .post__more-info_item{
+        gap: 6px;
+    }
+
+    .post-short-view {
+        padding: 14px 12px;
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .post-short-view__info {
+        gap: 6px;
+    }
+
+    .post-short-view__info_text {
+        margin: 0 6px 0 0;
     }
 
     .side-bar {
@@ -188,6 +312,11 @@
 
     .side-bar__menu{
         padding-bottom: 8px;
+    }
+
+    .side-bar__menu  img, .side-bar__review img, .post__author img, .post__more-info img {
+        width: 20px;
+        height: 20px;
     }
 
     .side-bar__menu_item, .side-bar__review_item{
@@ -240,7 +369,7 @@
         height: 16px;
     }
 
-    .user-card__links svg {
+    .user-card__links img {
         width: 16px;
         height: 16px;
     }
@@ -253,73 +382,47 @@
 
     .activity-wrap {
         gap: 12px;
+        display: block;
     }
 
-    .activity-wrap svg {
-        width: 16px;
-        height: 16px;
+    .post {
+        padding: 21px 12px 12px;
+        gap: 6px;
     }
 
-    .side-bar {
+    .post__author{
+        gap: 3px;
+    }
+
+    .post__info {
+        padding-left: 3px;
+    }
+
+    .post__info_text {
+        margin: 0 0 6px;
+    }
+
+    .post__more-info{
         gap: 12px;
     }
 
-    .side-bar__menu{
-        padding-bottom: 5px;
-    }
-
-    .side-bar__menu_item, .side-bar__review_item{
-        padding: 3px 6px;
-        gap: 6px;
-    }
-
-    .side-bar__navigation {
-        padding: 6px 0;
-        margin-bottom: 3px;
-    }
-
-    .side-bar__review {
-        padding-bottom: 3px;
-    }
-
-    .side-bar__review_btn {
-        font-size: 8px;
-        line-height: 14px;
-    }
-
-    .side-bar__review_input {
-        height: 56px;
-        padding: 3px 6px;
-        font-size: 8px;
-        line-height: 12px;
-    }
-
-    .user-card {
-        padding: 12px 0 13px;
-        gap: 6px;
-    }
-
-    .user-card__info p:first-child {
-        margin-bottom: 3px;
-    } 
-
-    .user-card__info_name {
-        font-size: 12px;
-        line-height: 15 px;
-    }
-
-    .user-card__logo {
-        width: 80px;
-        height: 80px;
-    }
-
-    .user-card__links{
+    .post__more-info_item{
         gap: 3px;
-        height: 12px;
     }
 
-    .user-card__links svg {
-        width: 12px;
-        height: 12px;
+    .post-short-view {
+        padding: 8px 6px;
+    }
+
+    .post-short-view__info {
+        gap: 3px;
+    }
+
+    .post-short-view__info_text {
+        margin: 0 3px 0 0;
+    }
+
+    .side-bar {
+        display: none;
     }
 }

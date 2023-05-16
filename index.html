@@ -76,25 +76,59 @@
   <main>
     <div class="activity-wrap">
       <ul class="activity-list">
-          <li class="activity-list__item">
-              <Post data = {data.post}/>
-          </li>
-          {data.shortPosts.map((post, index) => (
-              <li class="activity-list__item" key={`${post.title} ${index}`}>
-                  <ShortPostView post = {post}/>
-              </li>
-          ))}
-          
+            <li class="activity-list__item">
+                <div class="post">
+                    <img src="img/abstract-art.jpg" alt="Abstract Wallpaper" class="post__img"/>
+                    <div class="post__author">
+                        <img src="./img/icons/comment.svg" alt="Comment logo">
+                        <p>Jason Anderson <span>commented:</span></p>
+                    </div>
+                    <div class="post__info">
+                        <p class="post__info_text">Don’t sit and wait. Get out there, feel life. Touch the sun, and immerse in the sea. Keep love in your heart. A life without it is like a sunless garden when the flowers are dead. Because summer is passion, memories, light breeze, the sun that appears on the skin and caresses the face.</p>
+                        <p class="post__info_time">- Jason, <span>10:30 am</span></p>
+                    </div>
+                    <div class="post__more-info">
+                        <div class="post__more-info_item">
+                            <img src="./img/icons/eye.svg" alt="Eye logo">
+                            <p>432</p>
+                        </div>
+                        <div class="post__more-info_item">
+                            <img src="./img/icons/comment.svg" alt="Comment logo">
+                            <p>47</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="activity-list__item">
+                <div class="post-short-view">
+                    <p class="post-short-view__title">Sunset Krasnoyarsk</p>
+                    <div class="post-short-view__info">
+                        <TimeLogo/>
+                        <p class="post-short-view__info_text">53 minutes ago</p>
+                        <ChevronDownLogo class="post-short-view__info_chevron-down"/>
+                    </div>
+                </div>
+            </li>
+            <li class="activity-list__item">
+                <div class="post-short-view">
+                    <p class="post-short-view__title">Morning of Siberia</p>
+                    <div class="post-short-view__info">
+                        <TimeLogo/>
+                        <p class="post-short-view__info_text">56 minutes ago</p>
+                        <ChevronDownLogo class="post-short-view__info_chevron-down"/>
+                    </div>
+                </div>
+            </li>
       </ul>
       <div class="side-bar">
           <div class="user-card">
               <img src="./img/user-logo.jpg" alt="User logo" class="user-card__logo"/>
-              <Link to={APPRoute.CV} class="user-card__cv-link">
+              <a href="/cv/" class="user-card__cv-link">
                   <div class="user-card__info">
                       <p class="user-card__info_name">Dmitrii Borozdin</p>
                       <p class="user-card__info_profession">Frontend developer</p>
                   </div>
-              </Link>
+                </a>
               <div class="user-card__links">
                   <a href = "https://t.me/DmBorozdin" target="_blank"  rel="noreferrer"><img src="./img/icons/telegram.svg" alt="Telegram logo"></a>
                   <a href="https://novosibirsk.hh.ru/resume/341d9996ff0b88f0480039ed1f666d67466156" target="_blank"  rel="noreferrer"><img src="./img/icons/hh.ru.svg" alt="HH.ru logo"></a>

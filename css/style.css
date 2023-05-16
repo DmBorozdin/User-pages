@@ -161,62 +161,38 @@ main{
 
 @media screen and (max-width: 768px) {
     main {
-        font-size: 8px;
-        line-height: 10px;
         padding: 12px;
     }
 
     .menu{
         padding: 0px 12px;
     }
-
-    .menu img {
-        width: 12px;
-        height: 12px;
-    }
-    
-    .menu__item_link, .menu__right_item{
-        padding: 5px 6px;
-        gap: 3px;
-    }
-    
-    .menu__right_item:last-child {
-        padding: 3px 6px;
-    }
-
-    .menu__right_item .menu__right_chevron{
-        width: 16px;
-        height: 16px;
-    }
-    
-    .page-header {
-        font-size: 8px;
-        line-height: 10px;
-    }
-    
-    .page-header__title {
-        font-size: 12px;
-        line-height: 14px;
-    }
-    
-    .page-header__tools{
-        gap: 8px;
-    }
-    
-    .page-header__tools_item {
-        gap: 3px;
-    }
     
     .page-header__top{
-        padding: 3px 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
     }
 
-    .page-header__top img {
-        width: 16px;
-        height: 16px;
+    .menu__left {
+        gap: 40px;
     }
-    
-    .page-header__wrap {
-        gap: 3px;
+}
+
+@media screen and (max-width: 400px) {
+    .menu {
+        align-items: inherit;
+    }
+
+    .menu__left, .menu__right {
+        gap: 0;
+        width: 100%;
+        justify-content: space-between;
     }
 }
