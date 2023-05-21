@@ -11,6 +11,7 @@ body {
     color: #505050;
     min-width: 320px;
     margin: 0;
+    background-color: #f1f1f1;
 }
 
 .accordion {
@@ -42,15 +43,12 @@ body {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px -1px 1px rgba(0, 0, 0, 0.1);
 }
 
-.cv  p {
-    margin: 0;
+.cv {
+    max-width: 800px;
 }
 
 .cv__header {
-    display: flex;
-    justify-content: space-between;
     border-bottom: 2px solid #D3D8DE;
-    padding-bottom: 8px;
 }
 
 .cv__logo{
@@ -58,51 +56,27 @@ body {
     height: 120px;
 }
 
-.cv__personal-info {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+.cv__contacts, .cv__skills {
+    color: #8F8F8F;
 }
 
-.cv__personal-info ul {
+.cv__contacts_list {
     text-decoration: none;
     list-style-type: none;
 }
 
-.cv__personal-info_contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+.cv__contacts_telegram {
+    color: #505050;
+    text-decoration: none;
 }
 
-.cv__personal-info_contacts span {
-    color: #8F8F8F;
-}
-
-.cv__personal-info_list {
-    margin: 0;
-    padding: 0;
-}
-
-.cv__personal-info_name {
+.cv__name {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
 }
 
-.cv__skills {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.cv__skills_title {
-    color: #8F8F8F;
-}
-
 .cv__skills_list {
-    margin: 0;
-    padding-left: 16px;
     list-style-type: "-";
 }
 
@@ -263,10 +237,6 @@ body {
     font-weight: 400;
 }
 
-.tab-content {
-    background-color: #F1F1F1;
-}
-
 .thoughts-input {
     font-size: 14px;
     color: #8F8F8F;
@@ -313,4 +283,14 @@ body {
     display: flex;
     gap: 6px;
     height: 20px;
+}
+
+@media screen and (max-width: 410px) {
+    .cv__header {
+        flex-direction: column;
+    }
+
+    .cv__skills_list li {
+        padding-left: 8px;
+    }
 }
