@@ -12,17 +12,14 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-md navbar-light" style="background-color: #ffffff;">
-        <div class="container-fluid py-3 px-4 py-md-0">
+        <div class="container-fluid py-3 py-md-0 px-sm-4">
             <div class="navbar-brand">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M9.73251 16.0174C9.91251 16.0174 10.0825 15.9474 10.2125 15.8074C10.4525 15.5374 10.4325 15.1274 10.1725 14.8874L7.28136 12.1674H15.35C16.6479 12.1674 17.7 13.2195 17.7 14.5174V16.2971C17.7 16.656 17.991 16.9471 18.35 16.9471C18.709 16.9471 19 16.656 19 16.2971V14.5174C19 12.5015 17.3658 10.8674 15.35 10.8674H7.27185L7.27194 10.8519L10.1325 8.43738C10.4025 8.19738 10.4125 7.78738 10.1725 7.51738C9.93249 7.25738 9.52249 7.23738 9.25249 7.47738L5.2325 10.9819C4.9225 11.2619 4.9225 11.7419 5.2325 12.0219L9.29251 15.8474C9.42251 15.9674 9.57251 16.0174 9.73251 16.0174Z" fill="#505050"/>
                 </svg>
                 <div>User pages - Profile</div>
             </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="topNavbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link nav-item-column" href="#">
@@ -62,9 +59,8 @@
         </div>
     </nav>
     <nav class="navbar navbar-expand-md navbar-light bottom-menu" style="background-color: #fafafa;">
-        <div class="container-fluid py-0 px-4">
-          <ul class="nav nav-pills" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
+        <div class="container-fluid py-0 px-sm-4">
+          <div class="nav nav-pills" id="myTab" role="tablist">
               <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M3.32813 4.79057C3.32812 4.49141 3.57064 4.2489 3.86979 4.2489L16.1302 4.2489C16.4294 4.2489 16.6719 4.49141 16.6719 4.79057C16.6719 5.08972 16.4294 5.33223 16.1302 5.33223L3.86979 5.33224C3.57064 5.33224 3.32813 5.08972 3.32813 4.79057Z" fill="#505050"/>
@@ -73,8 +69,6 @@
                 </svg>
                 <span>Activity</span>
               </button>
-            </li>
-            <li class="nav-item" role="presentation">
               <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5417 8.41664C6.5417 6.50665 8.09005 4.9583 10 4.9583C11.91 4.9583 13.4584 6.50665 13.4584 8.41664C13.4584 10.3266 11.91 11.875 10 11.875C8.09005 11.875 6.5417 10.3266 6.5417 8.41664ZM10 6.04164C8.68835 6.04164 7.62503 7.10496 7.62503 8.41664C7.62503 9.72831 8.68835 10.7916 10 10.7916C11.3117 10.7916 12.375 9.72831 12.375 8.41664C12.375 7.10496 11.3117 6.04164 10 6.04164Z" fill="#505050"/>
@@ -82,8 +76,6 @@
                   </svg>
                 <span>Map</span>
               </button>
-            </li>
-            <li class="nav-item" role="presentation">
               <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M10.5417 6.79453C10.5417 6.49538 10.2992 6.25286 10 6.25286C9.70085 6.25286 9.45833 6.49538 9.45833 6.79453V10.5445C9.45833 10.8437 9.70085 11.0862 10 11.0862H13.3333C13.6325 11.0862 13.875 10.8437 13.875 10.5445C13.875 10.2454 13.6325 10.0029 13.3333 10.0029H10.5417V6.79453Z" fill="#505050"/>
@@ -91,8 +83,11 @@
                 </svg>
                 <span>Time</span>
               </button>
-            </li>
-          </ul>
+              <button class="nav-link d-none" id="pills-cv-tab" data-bs-toggle="pill" data-bs-target="#pills-cv" type="button" role="tab" aria-controls="pills-cv" aria-selected="false"></button>
+          </div>
+          <button class="navbar-toggler px-0 px-sm-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item">
@@ -139,18 +134,221 @@
           </div>
         </div>
     </nav>
-    <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
-        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
-        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
-      </div>
-    </nav>
-    <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">Menu</div>
+    <section class="main-content">
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+          <div class="container-fluid py-2 p-sm-4">
+            <div class="row">
+              <div class="col">
+                <div class="row mx-0 mb-4">
+                  <div class="post">
+                    <img src="img/abstract-art.jpg" alt="Abstract Wallpaper" class="post__img"/>
+                    <div class="post__author">
+                      <img src="./img/icons/comment.svg" alt="Comment logo">
+                      <p>Jason Anderson <span>commented:</span></p>
+                    </div>
+                    <div class="post__info">
+                      <p class="post__info_text">Don’t sit and wait. Get out there, feel life. Touch the sun, and immerse in the sea. Keep love in your heart. A life without it is like a sunless garden when the flowers are dead. Because summer is passion, memories, light breeze, the sun that appears on the skin and caresses the face.</p>
+                      <p class="post__info_time">- Jason, <span>10:30 am</span></p>
+                    </div>
+                    <div class="post__more-info">
+                      <div class="post__more-info_item">
+                        <img src="./img/icons/eye.svg" alt="Eye logo">
+                        <span>432</span>
+                      </div>
+                      <div class="post__more-info_item">
+                        <img src="./img/icons/comment.svg" alt="Comment logo">
+                        <span>47</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mx-0 mb-4">
+                  <div class="post-short-view">
+                    <p class="post-short-view__title">Morning of Siberia</p>
+                    <div class="post-short-view__info">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.5417 6.79453C10.5417 6.49538 10.2992 6.25286 10 6.25286C9.70085 6.25286 9.45833 6.49538 9.45833 6.79453V10.5445C9.45833 10.8437 9.70085 11.0862 10 11.0862H13.3333C13.6325 11.0862 13.875 10.8437 13.875 10.5445C13.875 10.2454 13.6325 10.0029 13.3333 10.0029H10.5417V6.79453Z" fill="#505050"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 10C2.5 5.85786 5.85786 2.5 10 2.5C14.1421 2.5 17.5 5.85786 17.5 10C17.5 14.1421 14.1421 17.5 10 17.5C5.85786 17.5 2.5 14.1421 2.5 10ZM10 3.58333C6.45617 3.58333 3.58333 6.45617 3.58333 10C3.58333 13.5438 6.45617 16.4167 10 16.4167C13.5438 16.4167 16.4167 13.5438 16.4167 10C16.4167 6.45617 13.5438 3.58333 10 3.58333Z" fill="#505050"/>
+                        </svg>
+                        <p class="post-short-view__info_text">56 minutes ago</p>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.71387 9.99632C7.71387 9.81632 7.78387 9.64632 7.92387 9.51632C8.19387 9.27632 8.60387 9.29632 8.84387 9.55632L11.9901 13.0495L15.0079 9.56022C15.2479 9.29022 15.6579 9.28022 15.9279 9.52022C16.1879 9.76022 16.2079 10.1702 15.9679 10.4402L12.5101 14.4195C12.2301 14.7295 11.7501 14.7295 11.4701 14.4195L7.88387 10.4363C7.76387 10.3063 7.71387 10.1563 7.71387 9.99632Z" fill="#8F8F8F"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mx-0 mb-2">
+                  <div class="post-short-view">
+                    <p class="post-short-view__title">Morning of Siberia</p>
+                    <div class="post-short-view__info">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.5417 6.79453C10.5417 6.49538 10.2992 6.25286 10 6.25286C9.70085 6.25286 9.45833 6.49538 9.45833 6.79453V10.5445C9.45833 10.8437 9.70085 11.0862 10 11.0862H13.3333C13.6325 11.0862 13.875 10.8437 13.875 10.5445C13.875 10.2454 13.6325 10.0029 13.3333 10.0029H10.5417V6.79453Z" fill="#505050"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 10C2.5 5.85786 5.85786 2.5 10 2.5C14.1421 2.5 17.5 5.85786 17.5 10C17.5 14.1421 14.1421 17.5 10 17.5C5.85786 17.5 2.5 14.1421 2.5 10ZM10 3.58333C6.45617 3.58333 3.58333 6.45617 3.58333 10C3.58333 13.5438 6.45617 16.4167 10 16.4167C13.5438 16.4167 16.4167 13.5438 16.4167 10C16.4167 6.45617 13.5438 3.58333 10 3.58333Z" fill="#505050"/>
+                        </svg>
+                        <p class="post-short-view__info_text">56 minutes ago</p>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.71387 9.99632C7.71387 9.81632 7.78387 9.64632 7.92387 9.51632C8.19387 9.27632 8.60387 9.29632 8.84387 9.55632L11.9901 13.0495L15.0079 9.56022C15.2479 9.29022 15.6579 9.28022 15.9279 9.52022C16.1879 9.76022 16.2079 10.1702 15.9679 10.4402L12.5101 14.4195C12.2301 14.7295 11.7501 14.7295 11.4701 14.4195L7.88387 10.4363C7.76387 10.3063 7.71387 10.1563 7.71387 9.99632Z" fill="#8F8F8F"/>
+                        </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-2 col-3 side-bar d-none d-md-block">
+                <div class="row gap-4 mx-0">
+                  <div class="user-card px-0">
+                    <img src="./img/user-logo.jpg" alt="User logo" class="user-card__logo"/>
+                    <label for="pills-cv-tab">
+                        <div class="user-card__info">
+                            <p class="user-card__info_name">Dmitrii Borozdin</p>
+                            <p class="user-card__info_profession">Frontend developer</p>
+                        </div>
+                    </label>
+                    <div class="user-card__links">
+                        <a href = "https://t.me/DmBorozdin" target="_blank"  rel="noreferrer"><img src="./img/icons/telegram.svg" alt="Telegram logo"></a>
+                        <a href="https://novosibirsk.hh.ru/resume/341d9996ff0b88f0480039ed1f666d67466156" target="_blank"  rel="noreferrer"><img src="./img/icons/hh.ru.svg" alt="HH.ru logo"></a>
+                        <a href="https://twitter.com" target="_blank"  rel="noreferrer"><img src="./img/icons/twitter.svg" alt="Twitter logo"></a>
+                    </div>
+                  </div>
+                  <div class="side-bar__menu px-0">
+                    <div class="accordion accordion-flush" id="accordionExample">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Navigation
+                          </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                          <div class="accordion-body p-2 p-lg-3">
+                            <ul class="list-group list-group-flush gap-3">
+                              <li class="list-group-item p-0 border-0">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.56456 7.96802C7.26365 5.32002 9.33497 3 12 3C14.6651 3 16.7364 5.32002 16.4355 7.96803L16.1734 10.274C15.9322 12.3966 14.1363 14 12 14C9.86377 14 8.06781 12.3966 7.8266 10.274L7.56456 7.96802ZM15.1438 7.82124L14.8817 10.1272C14.7152 11.5928 13.4751 12.7 12 12.7C10.5249 12.7 9.28484 11.5928 9.11829 10.1272L8.85625 7.82124C8.64297 5.94439 10.1111 4.3 12 4.3C13.889 4.3 15.3571 5.94439 15.1438 7.82124Z" fill="#505050"/>
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.28926 19.6984C4.89931 16.9532 7.33419 15 10.1464 15H13.8537C16.6658 15 19.1007 16.9532 19.7108 19.6984L19.8107 20.1481C19.9079 20.5853 19.5752 21 19.1274 21H4.87265C4.42482 21 4.09217 20.5853 4.18932 20.1481L4.28926 19.6984ZM13.8537 16.3C15.9595 16.3 17.7953 17.6982 18.3704 19.7H5.62966C6.20474 17.6982 8.04051 16.3 10.1464 16.3H13.8537Z" fill="#505050"/>
+                                </svg>
+                                <span class="align-middle ms-0 ms-lg-2">My profile</span>
+                              </li>
+                              <li class="list-group-item p-0 border-0 d-flex justify-content-between align-items-center">
+                                <div>
+                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.00438 8.64713L3.00784 5.55458C3.1409 4.13281 5.55069 3 8.50392 3C8.7274 3 8.94777 3.00649 9.16427 3.01909C11.7326 3.16778 13.7561 4.1677 13.9795 5.41506C13.9888 5.46123 13.9956 5.50775 14 5.55458L14 7.92896C14 8.27842 13.706 8.55582 13.3565 8.5604C13.0003 8.56507 12.7 8.28487 12.7 7.92857V7.35282C11.6911 7.92606 10.1839 8.29 8.5 8.29C6.81957 8.29 5.31515 7.92757 4.3063 7.35639L4.30519 8.64713H4.30695C4.32232 8.6915 4.42964 8.98563 5.17866 9.34585C5.81675 9.65273 6.9668 9.92628 8.11016 10.0174C8.24612 10.0282 8.38164 10.0361 8.51619 10.0413C8.80146 10.0523 8.91425 10.5902 8.74066 10.8169C8.49853 11.133 8.18181 11.335 7.7855 11.2961C6.43867 11.164 5.18795 10.7933 4.30378 10.2856L4.30261 11.6471H4.30694C4.32231 11.6915 4.42964 11.9856 5.17865 12.3459C5.74625 12.6188 6.78971 12.8353 7.7863 12.934C8.1323 12.9683 8.40538 13.2534 8.40538 13.6011C8.40538 13.972 8.09566 14.2699 7.7266 14.2324C6.4039 14.0978 5.17406 13.7442 4.30123 13.2563L4.30005 14.6228C4.30191 14.6301 4.30561 14.6413 4.31301 14.6571C4.32876 14.6907 4.36242 14.747 4.43061 14.8215C4.57204 14.9762 4.82374 15.1673 5.21539 15.3534C5.78025 15.6218 6.81773 15.8336 7.7992 15.9309C8.14515 15.9652 8.41815 16.2503 8.41815 16.5979C8.41815 16.969 8.10838 17.2669 7.73929 17.2291C5.24775 16.974 3.06653 15.9347 3 14.681L3.00515 8.68851C3.00464 8.67473 3.00438 8.66094 3.00438 8.64713ZM11.76 4.92228C11.0925 4.61092 10.1619 4.37849 9.08112 4.31644C8.89249 4.30568 8.69924 4.30004 8.50197 4.3C7.17666 4.30025 6.03115 4.55692 5.24782 4.92228C4.85619 5.10494 4.59884 5.29423 4.45003 5.4509C4.37799 5.52674 4.34022 5.58557 4.3214 5.62283C4.3149 5.63569 4.3106 5.64604 4.30776 5.65405L4.30776 5.65898C4.33747 5.73351 4.48101 6.01031 5.17433 6.34373C5.95819 6.7207 7.13243 6.99 8.5 6.99C9.86757 6.99 11.0418 6.7207 11.8257 6.34373C12.569 5.98627 12.6804 5.69389 12.6971 5.64607C12.6944 5.6395 12.691 5.63177 12.6864 5.62283C12.6676 5.58557 12.6299 5.52674 12.5578 5.4509C12.409 5.29423 12.1517 5.10494 11.76 4.92228Z" fill="#505050"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.94908 18.3163L9.94908 15.4271C9.94678 15.3957 9.94562 15.3641 9.94562 15.3324H9.94908L9.94908 12.2843C9.95242 12.248 9.95719 12.2119 9.96335 12.176C10.124 10.7845 12.5211 9.67993 15.4548 9.67993C18.4923 9.67993 20.9548 10.8641 20.9548 12.3249C20.9548 12.3871 20.9503 12.4488 20.9415 12.51L20.9491 18.3163C20.8723 19.7894 18.4393 20.9718 15.4491 20.9718C12.4589 20.9718 10.0259 19.7894 9.94908 18.3163ZM11.2648 12.3443C11.3222 12.2233 11.5253 11.9343 12.1972 11.6152C12.9788 11.244 14.1221 10.9833 15.4452 10.9833C16.7682 10.9833 17.9115 11.244 18.6931 11.6152C19.4086 11.955 19.5925 12.2607 19.635 12.3657C19.5848 12.4669 19.4075 12.7221 18.7805 13.0237C17.9966 13.4006 16.8224 13.6699 15.4548 13.6699C14.0872 13.6699 12.913 13.4006 12.1291 13.0237C11.4516 12.6978 11.2991 12.4261 11.2648 12.3443ZM11.2491 14.0295C12.258 14.6046 13.7677 14.9699 15.4548 14.9699C17.1325 14.9699 18.6347 14.6087 19.6435 14.0391L19.6452 15.3324H19.6426C19.6272 15.3767 19.5199 15.6709 18.7709 16.0311C17.9871 16.4081 16.8129 16.6774 15.4454 16.6774C14.0779 16.6774 12.9037 16.4081 12.1199 16.0311C11.384 15.6772 11.2675 15.3871 11.2491 15.3349V14.0295ZM15.4454 17.9774C13.7635 17.9774 12.2579 17.6143 11.2491 17.0422V18.2571C11.2635 18.3138 11.3824 18.6438 12.1727 19.0262C12.9541 19.4042 14.1088 19.6718 15.4491 19.6718C16.7893 19.6718 17.944 19.4042 18.7255 19.0262C19.5144 18.6445 19.6343 18.315 19.649 18.2574L19.6474 17.0389C18.6386 17.6129 17.1305 17.9774 15.4454 17.9774Z" fill="#505050"/>
+                                  </svg>
+                                  <span class="align-middle ms-0 ms-lg-2">Balance</span>
+                                </div>
+                                <span>$ 1,430</span>
+                              </li>
+                              <li class="list-group-item p-0 border-0 d-flex justify-content-between align-items-center">
+                                <div class="me-auto">
+                                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.6186 3.34691L20.6531 5.38145L18.6186 7.41599L16.5841 5.38145L18.6186 3.34691ZM17.7795 2.34759C18.2429 1.88414 18.9943 1.88414 19.4578 2.34759L21.6525 4.5423C22.1159 5.00575 22.1159 5.75715 21.6525 6.2206L19.4578 8.41531C18.9943 8.87877 18.2429 8.87877 17.7795 8.41531L15.5847 6.2206C15.1213 5.75715 15.1213 5.00575 15.5847 4.5423L17.7795 2.34759ZM7.10601 3.68144L3.70601 3.68144L3.70601 7.08144H7.10601V3.68144ZM18.6186 16.9266C17.6797 16.9266 16.9186 17.6877 16.9186 18.6266C16.9186 19.5655 17.6797 20.3266 18.6186 20.3266C19.5575 20.3266 20.3186 19.5655 20.3186 18.6266C20.3186 17.6877 19.5575 16.9266 18.6186 16.9266ZM2.40601 3.68144C2.40601 2.96347 2.98804 2.38144 3.70601 2.38144H7.10601C7.82398 2.38144 8.40601 2.96347 8.40601 3.68144V7.08144C8.40601 7.79941 7.82398 8.38144 7.10601 8.38144H3.70601C2.98804 8.38144 2.40601 7.79941 2.40601 7.08144V3.68144ZM18.6186 15.6266C16.9617 15.6266 15.6186 16.9698 15.6186 18.6266C15.6186 20.2835 16.9617 21.6266 18.6186 21.6266C20.2754 21.6266 21.6186 20.2835 21.6186 18.6266C21.6186 16.9698 20.2754 15.6266 18.6186 15.6266Z" fill="#505050"/>
+                                    <path d="M18.6185 10.0586C18.9775 10.0586 19.2685 10.3496 19.2685 10.7086V13.6722C19.2685 14.0311 18.9775 14.3222 18.6185 14.3222C18.2595 14.3222 17.9685 14.0311 17.9685 13.6722V10.7086C17.9685 10.3496 18.2595 10.0586 18.6185 10.0586Z" fill="#505050"/>
+                                    <path d="M10.3571 4.73141C9.99808 4.73141 9.70707 5.02243 9.70707 5.38141C9.70707 5.7404 9.99808 6.03141 10.3571 6.03141H13.2875C13.6465 6.03141 13.9375 5.7404 13.9375 5.38141C13.9375 5.02243 13.6465 4.73141 13.2875 4.73141H10.3571Z" fill="#505050"/>
+                                    <path d="M11.74 17.9585L10.227 16.4965C9.97315 16.2426 9.97315 15.8311 10.227 15.5772C10.4808 15.3234 10.8924 15.3234 11.1462 15.5772L14.1222 18.1489C14.376 18.4027 14.376 18.8142 14.1222 19.0681L11.154 21.6319C10.9002 21.8857 10.4886 21.8857 10.2348 21.6319C9.98096 21.3781 9.98096 20.9665 10.2348 20.7127L11.739 19.2594H8.41162C6.39578 19.2594 4.76162 17.6252 4.76162 15.6094V10.332C4.76162 9.97305 5.05264 9.68203 5.41162 9.68203C5.77061 9.68203 6.06162 9.97305 6.06162 10.332V15.6094C6.06162 16.9072 7.11375 17.9594 8.41162 17.9594L11.74 17.9585Z" fill="#505050"/>
+                                  </svg>
+                                  <span class="align-middle ms-0 ms-lg-2">Connections</span>
+                                </div>
+                                <span class="badge text-bg-danger rounded-pill">29</span>
+                              </li>
+                              <li class="list-group-item p-0 border-0">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.18979 2.5C5.96892 2.5 4.24282 4.43335 4.49358 6.64002L4.71195 8.56165C4.91295 10.3305 6.40959 11.6667 8.18979 11.6667C9.97 11.6667 11.4666 10.3305 11.6676 8.56165L11.886 6.64002C12.1368 4.43335 10.4107 2.5 8.18979 2.5ZM10.5912 8.43933L10.8096 6.5177C10.9873 4.95366 9.7639 3.58333 8.18979 3.58333C6.61568 3.58333 5.39226 4.95366 5.56999 6.5177L5.78835 8.43933C5.92715 9.66069 6.96057 10.5833 8.18979 10.5833C9.41902 10.5833 10.4524 9.6607 10.5912 8.43933Z" fill="#505050"/>
+                                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.64509 12.5C4.3016 12.5 2.27253 14.1277 1.76416 16.4153L1.68088 16.7901C1.59992 17.1544 1.87713 17.5 2.25032 17.5H14.1293C14.5025 17.5 14.7797 17.1544 14.6987 16.7901L14.6154 16.4153C14.107 14.1277 12.078 12.5 9.73449 12.5H6.64509ZM13.4984 16.4167C13.0192 14.7485 11.4894 13.5833 9.73449 13.5833H6.64509C4.8902 13.5833 3.3604 14.7485 2.88116 16.4167H13.4984Z" fill="#505050"/>
+                                  <path d="M11.8104 11.6667C11.4936 11.6667 11.3806 11.2819 11.579 11.0349C11.6181 10.9862 11.6562 10.9368 11.6933 10.8865C11.8301 10.7013 12.0395 10.5836 12.2657 10.5404C13.2865 10.3453 14.0906 9.50632 14.2118 8.43933L14.4302 6.5177C14.5809 5.19109 13.7236 4.00386 12.4993 3.67396C12.2056 3.59482 11.932 3.43896 11.7408 3.20237C11.6994 3.1512 11.6571 3.10088 11.6137 3.05145C11.4294 2.8416 11.5311 2.5 11.8104 2.5C14.0312 2.5 15.7573 4.43335 15.5066 6.64002L15.2882 8.56165C15.0872 10.3305 13.5906 11.6667 11.8104 11.6667Z" fill="#505050"/>
+                                  <path d="M16.0953 17.5C15.8098 17.5 15.6062 17.207 15.6031 16.9215C15.6002 16.6599 15.7874 16.4167 16.049 16.4167H17.119C16.7548 15.149 15.784 14.1718 14.5688 13.7757C14.3949 13.719 14.2482 13.637 14.1356 13.4929C13.8327 13.105 14.0968 12.5305 14.5741 12.6503C16.375 13.1027 17.8185 14.5364 18.236 16.4153L18.3193 16.7901C18.4002 17.1544 18.123 17.5 17.7498 17.5H16.0953Z" fill="#505050"/>
+                                </svg>
+                                <span class="align-middle ms-0 ms-lg-2">Friends</span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <ul class="list-group list-group-flush gap-3 p-2 p-lg-3">
+                      <li class="list-group-item p-0 border-0 d-flex justify-content-between align-items-center">
+                        <div class="me-auto">
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.88002 12.65C8.13104 12.65 7.53002 13.251 7.53002 14V15.32C7.53002 16.069 8.13104 16.67 8.88002 16.67H11.2C11.949 16.67 12.55 16.069 12.55 15.32V14C12.55 13.251 11.949 12.65 11.2 12.65H8.88002ZM8.83002 14C8.83002 13.9812 8.83633 13.9705 8.84339 13.9634C8.85046 13.9563 8.86122 13.95 8.88002 13.95H11.2C11.2188 13.95 11.2296 13.9563 11.2367 13.9634C11.2437 13.9705 11.25 13.9812 11.25 14V15.32C11.25 15.3388 11.2437 15.3496 11.2367 15.3566C11.2296 15.3637 11.2188 15.37 11.2 15.37H8.88002C8.86122 15.37 8.85046 15.3637 8.84339 15.3566C8.83633 15.3496 8.83002 15.3388 8.83002 15.32V14Z" fill="#505050"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.78998 2.60001C8.78998 2.24103 8.49896 1.95001 8.13998 1.95001C7.78099 1.95001 7.48998 2.24103 7.48998 2.60001V3.99002H7C5.34 3.99002 4 5.33002 4 6.99002V17.12C4 18.78 5.34 20.12 7 20.12H17C18.66 20.12 20 18.78 20 17.12V6.99002C20 5.33002 18.65 3.99002 17 3.99002H16.5V2.60001C16.5 2.24103 16.209 1.95001 15.85 1.95001C15.491 1.95001 15.2 2.24103 15.2 2.60001V3.99002H12.65V2.60001C12.65 2.24103 12.359 1.95001 12 1.95001C11.641 1.95001 11.35 2.24103 11.35 2.60001V3.99002H8.78998V2.60001ZM7.48998 5.29002V6.86001C7.48998 7.219 7.78099 7.51001 8.13998 7.51001C8.49896 7.51001 8.78998 7.219 8.78998 6.86001V5.29002H11.35V6.86001C11.35 7.219 11.641 7.51001 12 7.51001C12.359 7.51001 12.65 7.219 12.65 6.86001V5.29002H15.2V6.86001C15.2 7.219 15.491 7.51001 15.85 7.51001C16.209 7.51001 16.5 7.219 16.5 6.86001V5.29002H17C17.94 5.29002 18.7 6.05002 18.7 6.99002V9.35003H5.3V6.99002C5.3 6.05002 6.06 5.29002 7 5.29002H7.48998ZM5.3 10.65H18.7V17.12C18.7 18.06 17.94 18.82 17 18.82H7C6.06 18.82 5.3 18.06 5.3 17.12V10.65Z" fill="#505050"/>
+                          </svg>
+                          <span class="align-middle ms-0 ms-lg-2">Events</span>
+                        </div>
+                        <span class="badge text-bg-success rounded-pill">45</span>
+                      </li>
+                      <li class="list-group-item p-0 border-0">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3335 10C13.3335 11.841 11.8411 13.3334 10.0001 13.3334C8.15917 13.3334 6.66678 11.841 6.66678 10C6.66678 8.15909 8.15917 6.66671 10.0001 6.66671C11.8411 6.66671 13.3335 8.15909 13.3335 10ZM12.2501 10C12.2501 11.2427 11.2428 12.25 10.0001 12.25C8.75748 12.25 7.75012 11.2427 7.75012 10C7.75012 8.7574 8.75748 7.75004 10.0001 7.75004C11.2428 7.75004 12.2501 8.7574 12.2501 10Z" fill="#505050"/>
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9.15266 2.50415C8.41457 2.50415 7.78951 3.04844 7.68803 3.77953C7.56219 4.6862 6.61659 5.23214 5.76847 4.88779C5.08459 4.61012 4.30069 4.87929 3.93165 5.5185L3.13437 6.89944C2.7698 7.53089 2.91995 8.33384 3.48806 8.79088C4.22273 9.38192 4.21064 10.5217 3.45639 11.109C2.87399 11.5624 2.71514 12.3758 3.08419 13.015L3.88147 14.396C4.24604 15.0274 5.01649 15.2989 5.69636 15.0354C6.57555 14.6947 7.55662 15.2751 7.68803 16.2219C7.78951 16.9529 8.41457 17.4972 9.15266 17.4972H10.7472C11.4764 17.4972 12.0967 16.9657 12.2084 16.2452C12.3604 15.2654 13.3793 14.6771 14.3039 15.0354C14.9837 15.2989 15.7542 15.0274 16.1188 14.396L16.916 13.015C17.2851 12.3758 17.1262 11.5624 16.5438 11.109C15.7896 10.5217 15.7775 9.38192 16.5122 8.79088C17.0803 8.33384 17.2304 7.53089 16.8659 6.89944L16.0686 5.5185C15.6995 4.87929 14.9156 4.61012 14.2318 4.88779C13.3461 5.24738 12.3529 4.68794 12.2084 3.75618C12.0967 3.03566 11.4764 2.50415 10.7472 2.50415H9.15266ZM8.76108 3.92847C8.78821 3.73301 8.95533 3.58748 9.15266 3.58748L10.7472 3.58748C10.9422 3.58748 11.108 3.72959 11.1379 3.92223C11.3915 5.55743 13.1181 6.50916 14.6393 5.89154C14.8221 5.81731 15.0317 5.88927 15.1304 6.06017L15.9277 7.4411C16.0251 7.60993 15.985 7.8246 15.8331 7.9468C14.5438 8.98405 14.5829 10.9552 15.8783 11.9638C16.034 12.085 16.0765 12.3025 15.9778 12.4734L15.1806 13.8543C15.0831 14.0231 14.8771 14.0957 14.6953 14.0253C13.1257 13.417 11.3959 14.4157 11.1379 16.0792C11.108 16.2718 10.9422 16.4139 10.7472 16.4139H9.15266C8.95533 16.4139 8.78821 16.2684 8.76108 16.0729C8.53537 14.4467 6.84784 13.4273 5.30489 14.0253C5.12312 14.0957 4.91714 14.0231 4.81967 13.8543L4.02239 12.4734C3.92372 12.3025 3.96619 12.085 4.1219 11.9638C5.41736 10.9552 5.45644 8.98405 4.16712 7.9468C4.01523 7.8246 3.97509 7.60993 4.07256 7.4411L4.86984 6.06017C4.96851 5.88927 5.17809 5.81731 5.36093 5.89154C6.86322 6.50149 8.53817 5.53446 8.76108 3.92847Z" fill="#505050"/>
+                        </svg>
+                        <span class="align-middle ms-0 ms-lg-2">Account settings</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="side-bar-thoughts px-0">
+                    <div class="accordion accordion-flush" id="accordionThoughts">
+                      <div class="accordion-item">
+                        <h2 class="accordion-header">
+                          <button class="accordion-button collapsed px-3 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThoughts" aria-expanded="false" aria-controls="collapseThoughts">
+                            Share your thoughts
+                          </button>
+                        </h2>
+                        <div id="collapseThoughts" class="accordion-collapse collapse" data-bs-parent="#accordionThoughts">
+                          <div class="accordion-body px-3 py-2">
+                            <textarea class="form-control mb-2 thoughts-input" placeholder="Enter your message..."></textarea>
+                            <button class="btn btn-primary w-100 mb-2" type="submit">Save</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">Map</div>
         <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">Time</div>
-    </div>
+        <div class="tab-pane fade p-4" id="pills-cv" role="tabpanel" aria-labelledby="pills-cv-tab" tabindex="0">
+          <div class="container-md bg-light">
+            <div class="cv__header">
+              <div class="cv__personal-info">
+                  <p class="cv__personal-info_name">Бороздин Дмитрий</p>
+                  <div class="cv__personal-info_contacts">
+                      <span>Контакты</span>
+                      <ul class="cv__personal-info_list">
+                          <li>т: +7 111 111 11 11</li>
+                          <li>email: borozdin1@yandex.ru</li>
+                          <li>t: <a href = "https://t.me/DmBorozdin" target="_blank"  rel="noreferrer">@DmBorozdin</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <img src="../img/cv-logo.jpg" alt="User logo" class="cv__logo"/>
+          </div>
+          <div class="cv__skills">
+              <p>Frontend разработчик</p>
+              <p class="cv__skills_title">Список навыков</p>
+              <ul class="cv__skills_list">
+                  <li>HTML, CSS;</li>
+                  <li>SCSS/SASS;</li>
+                  <li>JavaScript(ES6)/TypeScript;</li>
+                  <li>React(react hooks), Redux(redux thunk/redux toolkit);</li>
+                  <li>REST API, Ajax, fetch;</li>
+                  <li>GIT;</li>
+                  <li>Webpack;</li>
+                  <li>Адаптивная вёрстка по макетам Figma с использованием PixelPerfect;</li>
+                  <li>Тесты, jest, enzyme;</li>
+                  <li>ООП, паттерны проектирования (MVP, Observer, Adapter и пр);</li>
+                  <li>Опыт разработки SPA</li>
+                  <li>Material UI;</li>
+                  <li>leaflet, Yandex maps;</li>
+                  <li>Базовые знания Node.js</li>
+                  <li>Базовые знания PostgreSQL, MongoDB</li>
+              </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>

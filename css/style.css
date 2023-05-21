@@ -13,8 +13,101 @@ body {
     margin: 0;
 }
 
+.accordion {
+    border-bottom: 1px solid #D3D8DE;
+}
+
+.accordion-button {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #505050;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #fff;
+    color: #505050;
+    border-bottom: 1px solid #D3D8DE;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #D3D8DE;
+}
+
 .bottom-menu {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1), 0px -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.cv  p {
+    margin: 0;
+}
+
+.cv__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #D3D8DE;
+    padding-bottom: 8px;
+}
+
+.cv__logo{
+    width: 120px;
+    height: 120px;
+}
+
+.cv__personal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cv__personal-info ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.cv__personal-info_contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cv__personal-info_contacts span {
+    color: #8F8F8F;
+}
+
+.cv__personal-info_list {
+    margin: 0;
+    padding: 0;
+}
+
+.cv__personal-info_name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.cv__skills {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cv__skills_title {
+    color: #8F8F8F;
+}
+
+.cv__skills_list {
+    margin: 0;
+    padding-left: 16px;
+    list-style-type: "-";
+}
+
+.cv__skills_list li {
+    padding-left: 16px;
 }
 
 .navbar {
@@ -29,6 +122,14 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
 }
 
 .navbar-toggler-icon {
@@ -60,4 +161,156 @@ body {
 
 .nav-tabs svg {
     margin-right: 8px;
+}
+
+.post{
+    padding: 36px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #fff;
+}
+
+.post__author{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.post__author p{
+    margin: 0;
+    color: #5095EC;
+}
+
+.post__author p span {
+    color: #505050;
+}
+
+.post__img {
+    width: 100%;
+    height: auto;
+}
+
+.post__info {
+    border-left: 2px solid #D3D8DE;
+    padding-left: 6px;
+}
+
+.post__info_text {
+    margin: 0 0 12px;
+}
+
+.post__info_time {
+    margin: 0;
+    color: #8F8F8F;
+}
+
+.post__info_time  span {
+    font-style: italic;
+}
+
+.post__more-info{
+    display: flex;
+    gap: 24px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.post__more-info_item{
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.post__more-info_item p {
+    margin: 0;
+}
+
+.post-short-view {
+    background-color: #fff;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.post-short-view__info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.post-short-view__info_text {
+    margin: 0 6px 0 0;
+}
+
+.post-short-view__title {
+    margin: 0;
+}
+
+.side-bar-thoughts .accordion {
+    border: none;
+}
+
+.side-bar .row div {
+    background-color: #fff;
+}
+
+.side-bar__menu .list-group-item .badge {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.tab-content {
+    background-color: #F1F1F1;
+}
+
+.thoughts-input {
+    font-size: 14px;
+    color: #8F8F8F;
+}
+
+.user-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0;
+    gap: 12px;
+}
+
+.user-card__info {
+    cursor: pointer;
+}
+
+.user-card__info p {
+    margin: 0;
+    text-align: center;
+} 
+
+.user-card__info p:first-child {
+    margin-bottom: 6px;
+}
+
+.user-card__info_name {
+    color: #505050;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.user-card__info_profession {
+    color: #8F8F8F;
+}
+
+.user-card__logo {
+    border-radius: 50%;
+    width: 132px;
+    height: 132px;
+}
+
+.user-card__links{
+    display: flex;
+    gap: 6px;
+    height: 20px;
 }
