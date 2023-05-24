@@ -14,11 +14,11 @@ body {
     background-color: #f1f1f1;
 }
 
-.accordion {
+.activity .accordion {
     border-bottom: 1px solid #D3D8DE;
 }
 
-.accordion-button {
+.activity .accordion-button {
     font-size: 14px;
     line-height: 20px;
     font-weight: 500;
@@ -32,6 +32,10 @@ body {
 .accordion-button:not(.collapsed) {
     background-color: #fff;
     color: #505050;
+    box-shadow: none;
+}
+
+.activity .accordion-button:not(.collapsed) {
     border-bottom: 1px solid #D3D8DE;
 }
 
@@ -84,8 +88,26 @@ body {
     padding-left: 16px;
 }
 
+.hide-element {
+    display: none;
+}
+
+#map {
+    aspect-ratio: 3/1;
+}
+
 .map-wrap {
     background-color: #fff;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.map-wrap .accordion-button {
+    width: 20px;
+}
+
+.map-wrap .accordion-body {
+    aspect-ratio: 3/1;
 }
 
 .navbar {
@@ -241,9 +263,18 @@ body {
     font-weight: 400;
 }
 
+.spinner-border {
+    width: 100px;
+    height: 100px;
+}
+
 .thoughts-input {
     font-size: 14px;
     color: #8F8F8F;
+}
+
+.update-icon {
+    cursor: pointer;
 }
 
 .user-card{
