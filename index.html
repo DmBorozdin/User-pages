@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>User pages</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__top">
+          <div class="page-header__wrap">
+                <img src="./img/icons/arrow-back.svg" alt="Arrow back logo">
+                <p class="page-header__title">User pages - Profile</p>
+          </div>
+          <div class="page-header__tools">
+              <div class="page-header__tools_item">
+                <img src="./img/icons/statistics.svg" alt="Statistics logo">
+                  Statistics
+              </div>
+              <div class="page-header__tools_item">
+                <img src="./img/icons/calculate.svg" alt="Invoices logo">
+                  Invoices
+              </div>
+              <div class="page-header__tools_item">
+                <img src="./img/icons/schedule.svg" alt="Schedule logo">
+                  Schedule
+              </div>
+          </div>
+      </div>
+      <div class="menu">
+          <ul class="menu__left">
+                <li class = "menu__item menu__item_active">
+                    <a href="index.html" class = "menu__item_link">
+                        <img src="./img/icons/menu.svg" alt="Menu logo">
+                        Activity
+                    </a>
+                </li>
+                <li class =" menu__item">
+                  <a href="pages/map.html" class = "menu__item_link">
+                        <img src="./img/icons/location.svg" alt="Map logo">
+                        Map
+                  </a>
+              </li>
+              <li class = "menu__item">
+                <a href="pages/time.html" class = "menu__item_link">
+                    <img src="./img/icons/time.svg" alt="Time logo">
+                    Time
+                </a>
+            </li>
+          </ul>
+          <div class="menu__right">
+              <div class="menu__right_item">
+                    <img src="./img/icons/notes.svg" alt="Notes logo">
+                    Notes
+              </div>
+              <div class="menu__right_item">
+                    <img src="./img/icons/friends.svg" alt="Friends logo">
+                    Friends
+              </div>
+              <div class="menu__right_item">
+                    <img src="./img/icons/photos.svg" alt="Photos logo">
+                    Photos
+              </div>
+              <div class="menu__right_item">
+                    <img src="./img/icons/settings.svg" alt="Settings logo">
+                    <img src="./img/icons/arrow-down.svg" alt="Arrow down logo" class="menu__right_chevron">
+              </div>
+          </div>
+      </div>
+  </header>
+  <main>
+    <div class="activity-wrap">
+      <ul class="activity-list">
+            <li class="activity-list__item">
+                <div class="post">
+                    <img src="img/abstract-art.jpg" alt="Abstract Wallpaper" class="post__img"/>
+                    <div class="post__author">
+                        <img src="./img/icons/comment.svg" alt="Comment logo">
+                        <p>Jason Anderson <span>commented:</span></p>
+                    </div>
+                    <div class="post__info">
+                        <p class="post__info_text">Don’t sit and wait. Get out there, feel life. Touch the sun, and immerse in the sea. Keep love in your heart. A life without it is like a sunless garden when the flowers are dead. Because summer is passion, memories, light breeze, the sun that appears on the skin and caresses the face.</p>
+                        <p class="post__info_time">- Jason, <span>10:30 am</span></p>
+                    </div>
+                    <div class="post__more-info">
+                        <div class="post__more-info_item">
+                            <img src="./img/icons/eye.svg" alt="Eye logo">
+                            <p>432</p>
+                        </div>
+                        <div class="post__more-info_item">
+                            <img src="./img/icons/comment.svg" alt="Comment logo">
+                            <p>47</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="activity-list__item">
+                <div class="post-short-view">
+                    <p class="post-short-view__title">Sunset Krasnoyarsk</p>
+                    <div class="post-short-view__info">
+                        <TimeLogo/>
+                        <p class="post-short-view__info_text">53 minutes ago</p>
+                        <ChevronDownLogo class="post-short-view__info_chevron-down"/>
+                    </div>
+                </div>
+            </li>
+            <li class="activity-list__item">
+                <div class="post-short-view">
+                    <p class="post-short-view__title">Morning of Siberia</p>
+                    <div class="post-short-view__info">
+                        <TimeLogo/>
+                        <p class="post-short-view__info_text">56 minutes ago</p>
+                        <ChevronDownLogo class="post-short-view__info_chevron-down"/>
+                    </div>
+                </div>
+            </li>
+      </ul>
+      <div class="side-bar">
+          <div class="user-card">
+              <img src="./img/user-logo.jpg" alt="User logo" class="user-card__logo"/>
+              <a href="pages/cv.html" class="user-card__cv-link">
+                  <div class="user-card__info">
+                      <p class="user-card__info_name">Dmitrii Borozdin</p>
+                      <p class="user-card__info_profession">Frontend developer</p>
+                  </div>
+                </a>
+              <div class="user-card__links">
+                  <a href = "https://t.me/DmBorozdin" target="_blank"  rel="noreferrer"><img src="./img/icons/telegram.svg" alt="Telegram logo"></a>
+                  <a href="https://novosibirsk.hh.ru/resume/341d9996ff0b88f0480039ed1f666d67466156" target="_blank"  rel="noreferrer"><img src="./img/icons/hh.ru.svg" alt="HH.ru logo"></a>
+                  <a href="https://twitter.com"><img src="./img/icons/twitter.svg" alt="Twitter logo"></a>
+              </div>
+          </div>
+          <div class="side-bar__menu">
+              <div class="side-bar__menu_item">
+                  <span class="side-bar__menu_title">Navigation</span>
+                  <img src="./img/icons/chevron-down.svg" alt="Chevron down logo">
+              </div>
+              <div class="side-bar__navigation">
+                  <div class="side-bar__menu_item">
+                      <img src="./img/icons/person.svg" alt="Person logo">
+                      <span>My profile</span>
+                  </div>
+                  <div class="side-bar__menu_item">
+                      <img src="./img/icons/finance.svg" alt="Finance logo">
+                      <span>Balance</span>
+                      <div class="side-bar__menu_balance-count">$ 1,430</div>
+                  </div>
+                  <div class="side-bar__menu_item">
+                      <img src="./img/icons/scheme.svg" alt="Scheme logo">
+                      <span>Connections</span>
+                      <div class="side-bar__menu_count side-bar__menu_connection-count">29</div>
+                  </div>
+                  <div class="side-bar__menu_item">
+                      <img src="./img/icons/people.svg" alt="People logo">
+                      <span>Friends</span>
+                  </div>
+              </div>
+              <div class="side-bar__menu_item">
+                  <img src="./img/icons/calendar.svg" alt="Calendar logo">
+                  <span>Events</span>
+                  <div class="side-bar__menu_count">45</div>
+              </div>
+              <div class="side-bar__menu_item">
+                  <img src="./img/icons/settings.svg" alt="Settings logo">
+                  Account settings
+              </div>
+          </div>
+          <div class="side-bar__review">
+              <div class="side-bar__review_item">
+                  <p class="side-bar__review_title">Share your thoughts</p>
+                  <img src="./img/icons/chevron-down.svg" alt="Chevron down logo">
+              </div>
+              <div class="side-bar__review_item">
+                  <textarea class="side-bar__review_input" placeholder="Enter your message..."></textarea>
+              </div>
+              <div class="side-bar__review_item">
+                  <button class="side-bar__review_btn" type="submit">Save</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  </main>
+  </body>
+</html>
